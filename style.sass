@@ -1,0 +1,193 @@
+/*      colors used      */
+$colorDarkMain: #222
+$colorLightMain: #fff
+
+//$colorDarkSide:
+$colorLightSide: #ebeced
+
+$colorAccents: #cb9753
+
+
+/*  sizes   */
+$heightHeader: 512px
+
+$widthNav: 1600px
+$heightNav: 96px
+
+$widthMenu: ($widthNav - 448px) / 2
+
+$widthHexagon: 85vw
+$heightHexagon: $widthHexagon * (1000/866) / 2
+
+/*      styles        */
+@import reset
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext')
+
+@font-face
+    font-family: 'Lemon/Milk'
+    src: 'LemonMilklight.otf'
+    font-weight: 300
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+
+@mixin zindex($number)
+    position: relative
+    z-index: $number
+
+@mixin hexagon-border-top($width, $bg)
+    top: 0
+    left: 0
+    border-bottom: ($width / 10) solid transparent
+    border-left: ($width / 2) solid $bg
+    border-right: ($width / 2) solid $bg
+
+body
+    background: $colorLightSide
+
+header
+    width: 100%
+    height: $heightHeader
+    background: $colorDarkMain
+    @include flex-center
+    align-items: flex-end
+
+    .header-logo
+        height: 384px
+        position: fixed
+        top: 0
+        @include flex-center
+        align-items: center
+        z-index: 10
+
+        .header-logo-link
+            font: 300 64px/0.8 'Lemon/Milk'
+            color: $colorAccents
+            text-align: center
+            width: 338px
+            height: 250px
+            @include flex-center
+            align-items: center
+            @include zindex(0)
+
+            &::before
+                content: ''
+                width: 338px
+                height: 250px
+                display: block
+                position: absolute
+                background: url('img/logo-background-part.png') no-repeat center center
+                filter: opacity(0.16)
+                z-index: -1
+
+    .header-logo__absolute
+        position: absolute
+        top: 512px !important
+
+
+    > nav
+        width: $widthNav
+        height: $heightNav
+        @include zindex(1)
+
+        > ul
+            width: $widthMenu
+            height: inherit
+            @include flex-center
+            align-items: stretch            
+            
+            &:first-child
+                float: left
+
+            &:last-child
+                float: right
+            
+            > li
+                float: left
+                height: inherit
+                flex: 1
+
+                > a
+                    float: left
+                    @include flex-center
+                    align-items: center
+                    box-sizing: border-box
+                    width: 100%
+                    height: inherit
+                    color: $colorLightMain
+                    font: 100 22px Roboto
+                    position: relative
+
+                    &:hover
+                        font-weight: 300
+                        color: $colorAccents
+                        text-shadow: 0 0 50px $colorAccents
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+
+                        &::before
+                            content: ''
+                            position: absolute
+                            @include hexagon-border-top($widthMenu / 2, $colorDarkMain)
+.hexagon
+    position: relative
+    width: $widthHexagon
+    min-height: $heightHexagon
+    background-color: $colorLightMain
+    margin: calc(calc(#{$heightHexagon} / 2) - 128px) auto 0
+
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        width: 0
+        border-left: $widthHexagon/2 solid transparent
+        border-right: $widthHexagon/2 solid transparent
+
+    &::before 
+        bottom: 100%
+        border-bottom: $heightHexagon/2 solid $colorLightMain
+
+    &::after 
+        top: 100%
+        width: 0
+        border-top: $heightHexagon/2 solid $colorLightMain
+
+
+    .hexagon-header
+        width: 470px
+        height: 334px
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        position: relative
+        left: 44px
+        bottom: 289px
+            
+        .hexagon-header-description
+            width: 270px
+            height: 132px
+            float: left
+            text-align: right
+            font: 300 16px Roboto
+
+            .description-title
+                font-weight: 500
+                color: $colorAccents
+
+        .hexagon-header-photo
+            width: 192px
+            height: 334px
+            background: url('img/photo.png') no-repeat bottom center
+            float: right
+
+            &::before
+                content: ''
+                display: block
+                position: relative
+                width: 8px
+                height: 192px
+                transform: rotate(90deg) skew(30deg)
+                left: 92px
+                top: -44px
+                background: $colorAccents

@@ -1,0 +1,237 @@
+/*      colors used      */
+/*  sizes   */
+/*      styles        */
+/*	resets browser predefined css	*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=latin-ext");
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+form,
+ol,
+ul,
+big,
+cite,
+code,
+del,
+em,
+img,
+q,
+s,
+strike,
+strong,
+b,
+u,
+i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+@font-face {
+  font-family: "Lemon/Milk";
+  src: "LemonMilklight.otf";
+  font-weight: 300;
+}
+body {
+  background: #ebeced;
+}
+
+header {
+  width: 100%;
+  height: 512px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+header .header-logo {
+  height: 384px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+header .header-logo .header-logo-link {
+  font: 300 64px/0.8 "Lemon/Milk";
+  color: #cb9753;
+  text-align: center;
+  width: 338px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+header .header-logo .header-logo-link::before {
+  content: "";
+  width: 338px;
+  height: 250px;
+  display: block;
+  position: absolute;
+  background: url("img/logo-background-part.png") no-repeat center center;
+  filter: opacity(0.16);
+  z-index: -1;
+}
+header .header-logo__absolute {
+  position: absolute;
+  top: 512px !important;
+}
+header > nav {
+  width: 1600px;
+  height: 96px;
+  position: relative;
+  z-index: 1;
+}
+header > nav > ul {
+  width: 576px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header > nav > ul:first-child {
+  float: left;
+}
+header > nav > ul:last-child {
+  float: right;
+}
+header > nav > ul > li {
+  float: left;
+  height: inherit;
+  flex: 1;
+}
+header > nav > ul > li > a {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: inherit;
+  color: #fff;
+  font: 100 22px Roboto;
+  position: relative;
+}
+header > nav > ul > li > a:hover {
+  font-weight: 300;
+  color: #cb9753;
+  text-shadow: 0 0 50px #cb9753;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+}
+header > nav > ul > li > a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 28.8px solid transparent;
+  border-left: 144px solid #222;
+  border-right: 144px solid #222;
+}
+
+.hexagon {
+  position: relative;
+  width: 85vw;
+  min-height: 49.0762124711vw;
+  background-color: #fff;
+  margin: calc(calc(49.0762124711vw / 2) - 128px) auto 0;
+}
+.hexagon::before, .hexagon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 42.5vw solid transparent;
+  border-right: 42.5vw solid transparent;
+}
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 24.5381062356vw solid #fff;
+}
+.hexagon::after {
+  top: 100%;
+  width: 0;
+  border-top: 24.5381062356vw solid #fff;
+}
+.hexagon .hexagon-header {
+  width: 470px;
+  height: 334px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  left: 44px;
+  bottom: 289px;
+}
+.hexagon .hexagon-header .hexagon-header-description {
+  width: 270px;
+  height: 132px;
+  float: left;
+  text-align: right;
+  font: 300 16px Roboto;
+}
+.hexagon .hexagon-header .hexagon-header-description .description-title {
+  font-weight: 500;
+  color: #cb9753;
+}
+.hexagon .hexagon-header .hexagon-header-photo {
+  width: 192px;
+  height: 334px;
+  background: url("img/photo.png") no-repeat bottom center;
+  float: right;
+}
+.hexagon .hexagon-header .hexagon-header-photo::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 8px;
+  height: 192px;
+  transform: rotate(90deg) skew(30deg);
+  left: 92px;
+  top: -44px;
+  background: #cb9753;
+}
+
+/*# sourceMappingURL=style.css.map */
