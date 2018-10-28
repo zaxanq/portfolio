@@ -207,9 +207,9 @@ header > nav > ul > li > a:hover::before {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
+  position: absolute;
   left: 44px;
-  bottom: 289px;
+  top: -290px;
 }
 .hexagon .hexagon-header .hexagon-header-description {
   width: 270px;
@@ -240,9 +240,7 @@ header > nav > ul > li > a:hover::before {
   top: -44.333px;
 }
 .hexagon .hexagon-body {
-  position: absolute;
   padding: 60px 80px;
-  top: 45px;
 }
 .hexagon .hexagon-body span {
   display: inline-block;
