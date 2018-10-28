@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="Stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="header-logo">
-            <a class="header-logo-link">
-                Krzysztof<br>
-                Kosmowski
-            </a>
+            <div class="header-logo-link">
+                <a href="index.php">Krzysztof<br>Kosmowski</a>
+            </div>
         </div>
         <nav>
             <ul>
@@ -28,7 +28,7 @@
     </header>
     <div class="hexagon">
         <div class="hexagon-header">
-            <div class="hexagon-header-description">
+            <article class="hexagon-header-description">
                 <span class="description-title">
                     Junior<br>
                     Front-end developer<br>
@@ -40,9 +40,13 @@
                     swojej pracy, dlatego chciałbym żeby<br>
                     to zajęcie zostało moją pracą.
                 </span>
-            </div>
+            </article>
             <div class="hexagon-header-photo"></div>    
         </div>
+        <div class="hexagon-body">
+            <span>Welcome!</span>
+        </div>
     </div>
+<script type="text/javascript" src="js/logo-absolute.js"></script>
 </body>
 </html>

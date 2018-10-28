@@ -35,8 +35,6 @@ i {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -73,6 +71,12 @@ q {
   src: "LemonMilklight.otf";
   font-weight: 300;
 }
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
 body {
   background: #ebeced;
 }
@@ -95,9 +99,6 @@ header .header-logo {
   z-index: 10;
 }
 header .header-logo .header-logo-link {
-  font: 300 64px/0.8 "Lemon/Milk";
-  color: #cb9753;
-  text-align: center;
   width: 338px;
   height: 250px;
   display: flex;
@@ -105,6 +106,11 @@ header .header-logo .header-logo-link {
   align-items: center;
   position: relative;
   z-index: 0;
+}
+header .header-logo .header-logo-link a {
+  font: 300 64px/0.8 "Lemon/Milk";
+  color: #cb9753;
+  text-align: center;
 }
 header .header-logo .header-logo-link::before {
   content: "";
@@ -149,7 +155,6 @@ header > nav > ul > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
   height: inherit;
   color: #fff;
@@ -210,7 +215,7 @@ header > nav > ul > li > a:hover::before {
   height: 132px;
   float: left;
   text-align: right;
-  font: 300 16px Roboto;
+  font-size: 16px;
 }
 .hexagon .hexagon-header .hexagon-header-description .description-title {
   font-weight: 500;
@@ -230,8 +235,13 @@ header > nav > ul > li > a:hover::before {
   height: 192px;
   transform: rotate(90deg) skew(30deg);
   left: 92px;
-  top: -44px;
+  top: -44.333px;
   background: #cb9753;
+}
+.hexagon .hexagon-body {
+  position: absolute;
+  top: 0;
+  padding: 70px 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

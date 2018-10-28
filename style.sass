@@ -43,6 +43,11 @@ $heightHexagon: $widthHexagon * (1000/866) / 2
     border-left: ($width / 2) solid $bg
     border-right: ($width / 2) solid $bg
 
+*
+    box-sizing: border-box
+    font-family: Roboto
+    font-weight: 300
+
 body
     background: $colorLightSide
 
@@ -62,14 +67,16 @@ header
         z-index: 10
 
         .header-logo-link
-            font: 300 64px/0.8 'Lemon/Milk'
-            color: $colorAccents
-            text-align: center
             width: 338px
             height: 250px
             @include flex-center
             align-items: center
             @include zindex(0)
+
+            a
+                font: 300 64px/0.8 'Lemon/Milk'
+                color: $colorAccents
+                text-align: center
 
             &::before
                 content: ''
@@ -112,7 +119,6 @@ header
                     float: left
                     @include flex-center
                     align-items: center
-                    box-sizing: border-box
                     width: 100%
                     height: inherit
                     color: $colorLightMain
@@ -169,7 +175,7 @@ header
             height: 132px
             float: left
             text-align: right
-            font: 300 16px Roboto
+            font-size: 16px
 
             .description-title
                 font-weight: 500
@@ -189,5 +195,10 @@ header
                 height: 192px
                 transform: rotate(90deg) skew(30deg)
                 left: 92px
-                top: -44px
+                top: -44.333px
                 background: $colorAccents
+
+    .hexagon-body
+        position: absolute
+        top: 0
+        padding: 70px 40px
