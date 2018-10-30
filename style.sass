@@ -1,23 +1,24 @@
 /*      colors used      */
-$colorDarkMain: #222
-$colorLightMain: #fff
+$color-main-dark: #222
+$color-addit-dark: #333
 
-//$colorDarkSide:
-$colorLightSide: #ebeced
+$color-main-light: #fff
+$color-addit-light: #ebeced
 
-$colorAccents: #cb9753
+$color-main-accents: #cb9753
+$color-addit-accents: #aaa
 
 
 /*  sizes   */
-$heightHeader: 512px
+$height-header: 512px
 
-$widthNav: 1600px
-$heightNav: 96px
+$width-nav: 1600px
+$height-nav: 96px
 
-$widthMenu: ($widthNav - 448px) / 2
+$width-menu: ($width-nav - 448px) / 2
 
-$widthHexagon: 85vw
-$heightHexagon: $widthHexagon * (1000/866) / 2
+$width-hexagon: 85vw
+$height-hexagon: $width-hexagon * (1000/866) / 2
 
 /*      styles        */
 @import reset
@@ -36,27 +37,20 @@ $heightHexagon: $widthHexagon * (1000/866) / 2
     width: $width
     height: $height
 
-@mixin hexagon-border-top($width, $bg)
-    top: 0
-    left: 0
-    border-bottom: ($width / 10) solid transparent
-    border-left: ($width / 2) solid $bg
-    border-right: ($width / 2) solid $bg
-
 *
     box-sizing: border-box
     font-family: Roboto
     font-weight: 300
 
 body
-    background: $colorLightSide
+    background: $color-addit-light
     font-size: 16px
 
 header
-    @include size(100%, $heightHeader)
+    @include size(100%, $height-header)
     @include flex-center
     align-items: flex-end
-    background: $colorDarkMain
+    background: $color-main-dark
 
     .header-logo
         height: 384px
@@ -75,7 +69,7 @@ header
             a
                 text-align: center
                 font: 300 64px/0.8 'Lemon/Milk'
-                color: $colorAccents
+                color: $color-main-accents
 
             &::before
                 content: ''
@@ -91,12 +85,12 @@ header
         top: 512px !important
 
     > nav
-        @include size($widthNav, $heightNav)
+        @include size($width-nav, $height-nav)
         position: relative
         z-index: 1
 
         > ul
-            @include size($widthMenu, inherit)
+            @include size($width-menu, inherit)
             @include flex-center
             align-items: stretch            
             
@@ -119,40 +113,44 @@ header
                     float: left
                     font-size: 1.4em
                     font-weight: 100
-                    color: $colorLightMain
+                    color: $color-main-light
 
                     &:hover
                         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
                         font-weight: 300
-                        color: $colorAccents
-                        text-shadow: 0 0 50px $colorAccents
+                        color: $color-main-accents
+                        text-shadow: 0 0 50px $color-main-accents
                         
                         &::before
                             content: ''
                             position: absolute
-                            @include hexagon-border-top($widthMenu / 2, $colorDarkMain)
+                            top: 0
+                            left: 0
+                            border-bottom: ($width-menu / 12) solid transparent
+                            border-left: ($width-menu / 4) solid $color-main-dark
+                            border-right: ($width-menu / 4) solid $color-main-dark
 .hexagon
-    width: $widthHexagon
-    min-height: $heightHexagon
+    width: $width-hexagon
+    min-height: $height-hexagon
     position: relative
-    margin: calc(calc(#{$heightHexagon} / 2) - 128px) auto 0
-    background-color: $colorLightMain
+    margin: calc(calc(#{$height-hexagon} / 2) - 128px) auto 0
+    background-color: $color-main-light
 
     &::before,
     &::after
         content: ""
         width: 0
         position: absolute
-        border-left: $widthHexagon/2 solid transparent
-        border-right: $widthHexagon/2 solid transparent
+        border-left: $width-hexagon/2 solid transparent
+        border-right: $width-hexagon/2 solid transparent
 
     &::before 
-        border-bottom: $heightHexagon/2 solid $colorLightMain
+        border-bottom: $height-hexagon/2 solid $color-main-light
         bottom: 100%
 
     &::after 
         width: 0
-        border-top: $heightHexagon/2 solid $colorLightMain
+        border-top: $height-hexagon/2 solid $color-main-light
         top: 100%
 
 
@@ -173,7 +171,7 @@ header
 
             .description-title
                 font-weight: 500
-                color: $colorAccents
+                color: $color-main-accents
 
         .hexagon-header-photo
             @include size(192px, 334px)
@@ -186,7 +184,7 @@ header
                 display: block
                 position: relative
                 transform: rotate(90deg) skew(30deg)
-                background: $colorAccents
+                background: $color-main-accents
                 left: 92px
                 top: -44.333px
 
@@ -198,3 +196,20 @@ header
             text-align: justify
             font-size: 1.1em
             line-height: 1.414
+
+            > a
+                color: $color-main-accents
+                text-decoration: underline
+
+                &:hover
+                    color: $color-addit-accents
+                    text-decoration: none
+            
+            .text
+                font-weight: 400
+
+            .text-gold
+                color: $color-main-accents
+
+            .text-dark
+                color: $color-addit-dark

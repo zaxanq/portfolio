@@ -173,7 +173,7 @@ header > nav > ul > li > a:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 28.8px solid transparent;
+  border-bottom: 48px solid transparent;
   border-left: 144px solid #222;
   border-right: 144px solid #222;
 }
@@ -247,6 +247,23 @@ header > nav > ul > li > a:hover::before {
   text-align: justify;
   font-size: 1.1em;
   line-height: 1.414;
+}
+.hexagon .hexagon-body span > a {
+  color: #cb9753;
+  text-decoration: underline;
+}
+.hexagon .hexagon-body span > a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+.hexagon .hexagon-body span .text {
+  font-weight: 400;
+}
+.hexagon .hexagon-body span .text-gold {
+  color: #cb9753;
+}
+.hexagon .hexagon-body span .text-dark {
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */
