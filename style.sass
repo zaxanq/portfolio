@@ -7,6 +7,7 @@ $color-addit-light: #ebeced
 
 $color-main-accents: #cb9753
 $color-addit-accents: #aaa
+$color-main-darkaccents: #8c6f4a
 
 
 /*  sizes   */
@@ -17,8 +18,12 @@ $height-nav: 96px
 
 $width-menu: ($width-nav - 448px) / 2
 
-$width-hexagon: 85vw
+$width-hexagon: 1340px
 $height-hexagon: $width-hexagon * (1000/866) / 2
+
+$width-bodypanel: 192px
+$height-bodypanel: 44px
+$margin-bodypanel: 10px
 
 /*      styles        */
 @import reset
@@ -82,7 +87,7 @@ header
 
     .header-logo__absolute
         position: absolute
-        top: 512px !important
+        top: 448px !important
 
     > nav
         @include size($width-nav, $height-nav)
@@ -160,8 +165,8 @@ header
         justify-content: space-between
         align-items: flex-end
         position: absolute
-        left: 44px
-        top: -290px
+        left: 24px
+        top: -278px
             
         .hexagon-header-description
             @include size(270px, 132px)
@@ -189,27 +194,68 @@ header
                 top: -44.333px
 
     .hexagon-body
-        padding: 60px 80px
+        padding: 128px 0
 
-        span
-            display: inline-block
-            text-align: justify
-            font-size: 1.1em
-            line-height: 1.414
+        .body-panel
 
-            > a
-                color: $color-main-accents
-                text-decoration: underline
+            h4
+                @include size($width-bodypanel, $height-bodypanel)
+                display: flex
+                align-items: center
+                position: relative
+                left: -$margin-bodypanel
+                background: $color-main-accents
+                padding-left: 32px
+                font-size: 1.5em
+                color: $color-main-light
+                text-transform: uppercase
 
-                &:hover
-                    color: $color-addit-accents
-                    text-decoration: none
-            
-            .text
-                font-weight: 400
+                &::before,
+                &::after
+                    content: ''
+                    @include size(0,0)
+                    display: block
+                    position: absolute
 
-            .text-gold
-                color: $color-main-accents
+                &::before
+                    border-left: $margin-bodypanel solid transparent
+                    border-top: $margin-bodypanel solid $color-main-darkaccents
+                    left: 0
+                    top: $height-bodypanel
 
-            .text-dark
-                color: $color-addit-dark
+                &::after
+                    border-top: $height-bodypanel/2 solid transparent
+                    border-left: $height-bodypanel/3 solid $color-main-accents
+                    border-bottom: $height-bodypanel/2 solid transparent
+                    left: $width-bodypanel
+                    top: 0
+                
+
+            span
+                display: block
+                text-align: justify
+                font-size: 1.1em
+                line-height: 1.8
+                padding-left: 16px
+                margin: 32px 128px 32px 76px
+                border-left: 4px solid $color-main-accents
+
+                > a
+                    color: $color-main-accents
+                    text-decoration: underline
+
+                    &:hover
+                        color: $color-addit-accents
+                        text-decoration: none
+                
+                .text
+                    font-weight: 400
+
+                .text-gold
+                    color: $color-main-accents
+
+                .text-dark
+                    color: $color-addit-dark
+
+
+// 1460px max media width for current

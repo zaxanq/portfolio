@@ -124,7 +124,7 @@ header .header-logo .header-logo-link::before {
 }
 header .header-logo__absolute {
   position: absolute;
-  top: 512px !important;
+  top: 448px !important;
 }
 header > nav {
   width: 1600px;
@@ -179,26 +179,26 @@ header > nav > ul > li > a:hover::before {
 }
 
 .hexagon {
-  width: 85vw;
-  min-height: 49.0762124711vw;
+  width: 1340px;
+  min-height: 773.6720554273px;
   position: relative;
-  margin: calc(calc(49.0762124711vw / 2) - 128px) auto 0;
+  margin: calc(calc(773.6720554273px / 2) - 128px) auto 0;
   background-color: #fff;
 }
 .hexagon::before, .hexagon::after {
   content: "";
   width: 0;
   position: absolute;
-  border-left: 42.5vw solid transparent;
-  border-right: 42.5vw solid transparent;
+  border-left: 670px solid transparent;
+  border-right: 670px solid transparent;
 }
 .hexagon::before {
-  border-bottom: 24.5381062356vw solid #fff;
+  border-bottom: 386.8360277136px solid #fff;
   bottom: 100%;
 }
 .hexagon::after {
   width: 0;
-  border-top: 24.5381062356vw solid #fff;
+  border-top: 386.8360277136px solid #fff;
   top: 100%;
 }
 .hexagon .hexagon-header {
@@ -208,8 +208,8 @@ header > nav > ul > li > a:hover::before {
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  left: 44px;
-  top: -290px;
+  left: 24px;
+  top: -278px;
 }
 .hexagon .hexagon-header .hexagon-header-description {
   width: 270px;
@@ -240,29 +240,65 @@ header > nav > ul > li > a:hover::before {
   top: -44.333px;
 }
 .hexagon .hexagon-body {
-  padding: 60px 80px;
+  padding: 128px 0;
 }
-.hexagon .hexagon-body span {
-  display: inline-block;
+.hexagon .hexagon-body .body-panel h4 {
+  width: 192px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -10px;
+  background: #cb9753;
+  padding-left: 32px;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.hexagon .hexagon-body .body-panel h4::before, .hexagon .hexagon-body .body-panel h4::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+}
+.hexagon .hexagon-body .body-panel h4::before {
+  border-left: 10px solid transparent;
+  border-top: 10px solid #8c6f4a;
+  left: 0;
+  top: 44px;
+}
+.hexagon .hexagon-body .body-panel h4::after {
+  border-top: 22px solid transparent;
+  border-left: 14.6666666667px solid #cb9753;
+  border-bottom: 22px solid transparent;
+  left: 192px;
+  top: 0;
+}
+.hexagon .hexagon-body .body-panel span {
+  display: block;
   text-align: justify;
   font-size: 1.1em;
-  line-height: 1.414;
+  line-height: 1.8;
+  padding-left: 16px;
+  margin: 32px 128px 32px 76px;
+  border-left: 4px solid #cb9753;
 }
-.hexagon .hexagon-body span > a {
+.hexagon .hexagon-body .body-panel span > a {
   color: #cb9753;
   text-decoration: underline;
 }
-.hexagon .hexagon-body span > a:hover {
+.hexagon .hexagon-body .body-panel span > a:hover {
   color: #aaa;
   text-decoration: none;
 }
-.hexagon .hexagon-body span .text {
+.hexagon .hexagon-body .body-panel span .text {
   font-weight: 400;
 }
-.hexagon .hexagon-body span .text-gold {
+.hexagon .hexagon-body .body-panel span .text-gold {
   color: #cb9753;
 }
-.hexagon .hexagon-body span .text-dark {
+.hexagon .hexagon-body .body-panel span .text-dark {
   color: #333;
 }
 
