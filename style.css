@@ -68,7 +68,7 @@ q {
 
 @font-face {
   font-family: "Lemon/Milk";
-  src: "LemonMilklight.otf";
+  src: url("LemonMilklight.otf");
   font-weight: 300;
 }
 * {
