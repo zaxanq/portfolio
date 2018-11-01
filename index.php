@@ -17,12 +17,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about-me">/about-me</a></li>
-                <li><a href="#my-skills">/my-skills</a></li>
+                <li><a class="menu-element" href="#about-me">/about-me</a></li>
+                <li><a class="menu-element" href="#my-skills">/my-skills</a></li>
             </ul>
             <ul>
-                <li><a href="#my-works">/my-works</a></li>
-                <li><a href="#contact-me">/contact-me</a></li>
+                <li><a class="menu-element" href="#my-works">/my-works</a></li>
+                <li><a class="menu-element" href="#contact-me">/contact-me</a></li>
             </ul>
         </nav>
     </header>
@@ -48,12 +48,13 @@
                 <h4>About me</h4>
                 <span>
                     <p>Mam 24 lata, pochodzę z woj. Śląskiego jednak przeprowadziłem się do Warszawy w pogoni za ambicjami. Moim celem jest rozpocząć w stolicy życie, którego fundamentami będzie praca jako Front-end developer. Jest to dla mnie przepis na sukces, ponieważ nie wyobrażam sobie innej pracy, z której czerpałbym tyle radości i satysfakcji.</p>
-                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
+                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka class="menu-element" hTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
                     <p>Mam ambicje i chęci do zdobywania wiedzy i rozwijania się, do odkrywania nowych rozwiązań i utrwalania tych już poznanych, do poznawania frameworków, bibliotek, zrozumienia zasad ich działania. Jednak nawet największe chęci i starania nie równają się doświadczeniu komercyjnemu. Dlatego chcę zdobyć je jak najprędzej.</p>
                 </span>
             </article>
         </div>
     </div>
 <script type="text/javascript" src="js/logo-absolute.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 </body>
 </html>
