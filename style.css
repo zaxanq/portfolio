@@ -243,14 +243,15 @@ header > nav > ul > li > a:hover::before {
   padding: 128px 0;
 }
 .hexagon .hexagon-body .body-panel h4 {
-  width: 192px;
+  width: fit-content;
   height: 44px;
+  width: -moz-fit-content;
   display: flex;
   align-items: center;
   position: relative;
   left: -10px;
   background: #cb9753;
-  padding-left: 32px;
+  padding: 0 32px;
   font-size: 1.5em;
   color: #fff;
   text-transform: uppercase;
@@ -272,12 +273,11 @@ header > nav > ul > li > a:hover::before {
   border-top: 22px solid transparent;
   border-left: 14.6666666667px solid #cb9753;
   border-bottom: 22px solid transparent;
-  left: 192px;
+  right: -14.6666666667px;
   top: 0;
 }
 .hexagon .hexagon-body .body-panel span {
   display: block;
-  text-align: justify;
   font-size: 1.1em;
   line-height: 1.8;
   padding-left: 16px;

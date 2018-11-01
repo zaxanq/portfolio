@@ -199,13 +199,14 @@ header
         .body-panel
 
             h4
-                @include size($width-bodypanel, $height-bodypanel)
+                @include size(fit-content, $height-bodypanel)
+                width: -moz-fit-content
                 display: flex
                 align-items: center
                 position: relative
                 left: -$margin-bodypanel
                 background: $color-main-accents
-                padding-left: 32px
+                padding: 0 32px
                 font-size: 1.5em
                 color: $color-main-light
                 text-transform: uppercase
@@ -227,13 +228,12 @@ header
                     border-top: $height-bodypanel/2 solid transparent
                     border-left: $height-bodypanel/3 solid $color-main-accents
                     border-bottom: $height-bodypanel/2 solid transparent
-                    left: $width-bodypanel
+                    right: -($height-bodypanel/3)
                     top: 0
                 
 
             span
                 display: block
-                text-align: justify
                 font-size: 1.1em
                 line-height: 1.8
                 padding-left: 16px
