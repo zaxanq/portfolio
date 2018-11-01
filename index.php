@@ -46,11 +46,11 @@
         <div class="hexagon-body">
             <article class="body-panel" id="about-me">
                 <h4>About me</h4>
-                <span>Mam 24 lata, pochodzę z woj. Śląskiego jednak przeprowadziłem się do Warszawy w pogoni za ambicjami. Moim celem jest rozpocząć w stolicy życie, którego fundamentami będzie praca jako Front-end developer. Jest to dla mnie przepis na sukces, ponieważ nie wyobrażam sobie innej pracy, z której czerpałbym tyle radości i satysfakcji.
-<br>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.
-<br>Mam ambicje i chęci do zdobywania wiedzy i rozwijania się, do odkrywania nowych rozwiązań i utrwalania tych już poznanych, do poznawania frameworków, bibliotek, zrozumienia zasad ich działania. Jednak nawet największe chęci i starania nie równają się doświadczeniu komercyjnemu. Dlatego chcę zdobyć je jak najprędzej.
-</span>
-
+                <span>
+                    <p>Mam 24 lata, pochodzę z woj. Śląskiego jednak przeprowadziłem się do Warszawy w pogoni za ambicjami. Moim celem jest rozpocząć w stolicy życie, którego fundamentami będzie praca jako Front-end developer. Jest to dla mnie przepis na sukces, ponieważ nie wyobrażam sobie innej pracy, z której czerpałbym tyle radości i satysfakcji.</p>
+                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
+                    <p>Mam ambicje i chęci do zdobywania wiedzy i rozwijania się, do odkrywania nowych rozwiązań i utrwalania tych już poznanych, do poznawania frameworków, bibliotek, zrozumienia zasad ich działania. Jednak nawet największe chęci i starania nie równają się doświadczeniu komercyjnemu. Dlatego chcę zdobyć je jak najprędzej.</p>
+                </span>
             </article>
         </div>
     </div>
