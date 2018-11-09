@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="Stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <title>Document</title>
 </head>
@@ -28,7 +29,7 @@
     </header>
     <div class="hexagon">
         <div class="hexagon-header">
-            <article class="hexagon-header-description">
+            <section class="hexagon-header-description">
                 <span class="description-title">
                     Junior<br>
                     Front-end developer<br>
@@ -40,18 +41,36 @@
                     swojej pracy, dlatego chciałbym żeby<br>
                     to zostało moją pracą.
                 </span>
-            </article>
+            </section>
             <div class="hexagon-header-photo"></div>    
         </div>
         <div class="hexagon-body">
-            <article class="body-panel" id="about-me">
+            <section class="body-panel" id="about-me">
                 <h4>About me</h4>
                 <span>
                     <p>Mam 24 lata, pochodzę z woj. Śląskiego jednak przeprowadziłem się do Warszawy w pogoni za ambicjami. Moim celem jest rozpocząć w stolicy życie, którego fundamentami będzie praca jako Front-end developer. Jest to dla mnie przepis na sukces, ponieważ nie wyobrażam sobie innej pracy, z której czerpałbym tyle radości i satysfakcji.</p>
-                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka class="menu-element" hTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
+                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
                     <p>Mam ambicje i chęci do zdobywania wiedzy i rozwijania się, do odkrywania nowych rozwiązań i utrwalania tych już poznanych, do poznawania frameworków, bibliotek, zrozumienia zasad ich działania. Jednak nawet największe chęci i starania nie równają się doświadczeniu komercyjnemu. Dlatego chcę zdobyć je jak najprędzej.</p>
                 </span>
-            </article>
+            </section>
+
+            <section class="body-panel" id="my-skills">
+                <h4>My skills</h4>
+                <span>
+                    <p>Używam języka HTML 5, wraz z semantyką kodu, którą wnosi oraz unikając przestarzałych rozwiązań. Do stylizacji stosuję preprocesora Sass, ponieważ ułatwia on tworzenie przejrzystych deklaracji, znam również framework Boostrap jednak (póki co) nie uważam go za odpowiednie dla mnie rozwiązanie. Preferuję pisać własne deklaracje. Ćwicze na codziennej praktyce moje umiejętności języka Javascript (ECMAScript 6) i biblioteki jQuery. Znam podstawy języków PHP i Python, a także wielokrotnie stosowałem bazy danych MySQL.</p>
+                    <p>Poza technologiami webowymi i językami programowania posiadam także zaawansowaną wiedzę z zakresu używania narzędzi takich jak Adobe: Photoshop, Illustrator, Indesign, a dzięki wieloletniej pracy z tym pierwszym posiadam także wyczucie w doborze kolorów i estetyki. Wiele tworzonych projektów rozpoczynam właśnie w programie graficznym. Chciałbym sprawdzić w praktyce Adobe Experience Design.</p>
+                </span>
+                <section class="skill-icons">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-sass"></i>
+                    <i class="fab fa-git-square"></i>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon">
+
+                </section>
+            </section>
         </div>
     </div>
 <script type="text/javascript" src="js/logo-absolute.js"></script>
