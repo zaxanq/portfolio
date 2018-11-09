@@ -200,6 +200,7 @@ header > nav > ul > li > a:hover::before {
   width: 0;
   border-top: 386.8360277136px solid #fff;
   top: 100%;
+  margin-bottom: 64px;
 }
 .hexagon .hexagon-header {
   width: 470px;
