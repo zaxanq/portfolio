@@ -240,7 +240,10 @@ header > nav > ul > li > a:hover::before {
   top: -44.333px;
 }
 .hexagon .hexagon-body {
-  padding: 128px 0;
+  padding: 64px 0;
+}
+.hexagon .hexagon-body .body-panel {
+  padding-top: 64px;
 }
 .hexagon .hexagon-body .body-panel h4 {
   width: fit-content;
@@ -281,7 +284,7 @@ header > nav > ul > li > a:hover::before {
   font-size: 1.1em;
   line-height: 1.8;
   padding-left: 16px;
-  margin: 32px 128px 32px 76px;
+  margin: 16px 128px 16px 76px;
   border-left: 4px solid #cb9753;
 }
 .hexagon .hexagon-body .body-panel span > p {
@@ -303,6 +306,31 @@ header > nav > ul > li > a:hover::before {
 }
 .hexagon .hexagon-body .body-panel span .text-dark {
   color: #333;
+}
+.hexagon .hexagon-body .body-panel .skill-icons {
+  text-align: center;
+  font-size: 64px;
+  letter-spacing: 16px;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-html5 {
+  color: #e54d26;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-css3-alt {
+  color: #379ad5;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-js {
+  color: #f7df1e;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-sass {
+  color: #cd6799;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-git-square {
+  color: #413000;
+}
+.hexagon .hexagon-body .body-panel .skill-icons img.icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: -7px;
 }
 
 /*# sourceMappingURL=style.css.map */

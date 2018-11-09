@@ -157,6 +157,7 @@ header
         width: 0
         border-top: $height-hexagon/2 solid $color-main-light
         top: 100%
+        margin-bottom: 64px
 
 
     .hexagon-header
@@ -194,9 +195,10 @@ header
                 top: -44.333px
 
     .hexagon-body
-        padding: 128px 0
+        padding: 64px 0
 
         .body-panel
+            padding-top: 64px
 
             h4
                 @include size(fit-content, $height-bodypanel)
@@ -237,7 +239,7 @@ header
                 font-size: 1.1em
                 line-height: 1.8
                 padding-left: 16px
-                margin: 32px 128px 32px 76px
+                margin: 16px 128px 16px 76px
                 border-left: 4px solid $color-main-accents
                 
                 > p
@@ -259,6 +261,31 @@ header
 
                 .text-dark
                     color: $color-addit-dark
+            
+            .skill-icons
+                text-align: center
+                font-size: 64px
+                letter-spacing: 16px
+
+                .fa-html5
+                    color: #e54d26
+                
+                .fa-css3-alt
+                    color: #379ad5
+
+                .fa-js
+                    color: #f7df1e
+
+                .fa-sass
+                    color: #cd6799
+
+                .fa-git-square
+                    color: #413000
+
+                img.icon
+                    width: 64px
+                    height: 64px
+                    margin-bottom: -7px
 
 
 // 1460px max media width for current
