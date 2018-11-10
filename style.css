@@ -203,21 +203,23 @@ header > nav > ul > li > a:hover::before {
   margin-bottom: 64px;
 }
 .hexagon .hexagon-header {
-  width: 470px;
-  height: 334px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  left: 24px;
   top: -278px;
 }
 .hexagon .hexagon-header .hexagon-header-description {
-  width: 270px;
+  width: 294px;
   height: 132px;
   float: left;
   text-align: right;
-  font-size: 1em;
+  margin-right: 8px;
+}
+.hexagon .hexagon-header .hexagon-header-description #cut-to-shape {
+  width: 100%;
+  height: 132px;
+  float: left;
+  shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0);
 }
 .hexagon .hexagon-header .hexagon-header-description .description-title {
   font-weight: 500;

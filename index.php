@@ -30,16 +30,12 @@
     <div class="hexagon">
         <div class="hexagon-header">
             <section class="hexagon-header-description">
+                <div id="cut-to-shape"></div>
                 <span class="description-title">
-                    Junior<br>
-                    Front-end developer<br>
+                    Junior Front-end developer
                 </span>
                 <span>
-                    Nazywam się Krzysztof,<br>
-                    moją pasją jest Front-end.<br>
-                    Czerpię satysfakcję widząc efekty<br>
-                    swojej pracy, dlatego chciałbym żeby<br>
-                    to zostało moją pracą.
+                    Nazywam się Krzysztof, moją pasją jest Front-end. Czerpię satysfakcję widząc efekty swojej pracy, dlatego chciałbym żeby ta pasja została moją pracą.
                 </span>
             </section>
             <div class="hexagon-header-photo"></div>    

@@ -161,19 +161,21 @@ header
 
 
     .hexagon-header
-        @include size(470px, 334px)
         display: flex
-        justify-content: space-between
         align-items: flex-end
         position: absolute
-        left: 24px
         top: -278px
             
         .hexagon-header-description
-            @include size(270px, 132px)
+            @include size(294px, 132px)
             float: left
             text-align: right
-            font-size: 1em
+            margin-right: 8px
+
+            #cut-to-shape
+                @include size(100%, 132px)
+                float: left
+                shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
 
             .description-title
                 font-weight: 500
