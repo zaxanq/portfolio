@@ -250,7 +250,7 @@ header > nav > ul > li > a:hover::before {
 }
 .hexagon .hexagon-body .body-panel h4 {
   width: fit-content;
-  height: 44px;
+  height: 48px;
   width: -moz-fit-content;
   display: flex;
   align-items: center;
@@ -273,13 +273,13 @@ header > nav > ul > li > a:hover::before {
   border-left: 10px solid transparent;
   border-top: 10px solid #8c6f4a;
   left: 0;
-  top: 44px;
+  top: 48px;
 }
 .hexagon .hexagon-body .body-panel h4::after {
-  border-top: 22px solid transparent;
-  border-left: 14.6666666667px solid #cb9753;
-  border-bottom: 22px solid transparent;
-  right: -14.6666666667px;
+  border-top: 24px solid transparent;
+  border-left: 16px solid #cb9753;
+  border-bottom: 24px solid transparent;
+  right: -16px;
   top: 0;
 }
 .hexagon .hexagon-body .body-panel span {

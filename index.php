@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="Stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="Stylesheet" type="text/css" href="font-awesome.css">
+    <script src="js/jquery-3.3.1.js"></script>
     <title>Document</title>
 </head>
 <body>
+<script type="text/javascript" src="js/scroll.js"></script>
     <header>
         <div class="header-logo">
             <div class="header-logo-link">
@@ -62,14 +63,12 @@
                     <i class="fab fa-js"></i>
                     <i class="fab fa-sass"></i>
                     <i class="fab fa-git-square"></i>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="icon">
-
+                    <img src="img/photoshop_icon.svg" class="icon">
+                    <img src="img/illustrator_icon.svg" class="icon">
                 </section>
             </section>
         </div>
     </div>
-<script type="text/javascript" src="js/logo-absolute.js"></script>
-<script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/logo.js"></script>
 </body>
 </html>
