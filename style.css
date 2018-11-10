@@ -310,28 +310,44 @@ header > nav > ul > li > a:hover::before {
 }
 .hexagon .hexagon-body .body-panel .skill-icons {
   text-align: center;
-  font-size: 64px;
-  letter-spacing: 16px;
+  font-size: 4em;
+  letter-spacing: 0.25em;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-html5 {
+.hexagon .hexagon-body .body-panel .skill-icons * {
+  transition: 0.5s;
+}
+.hexagon .hexagon-body .body-panel .skill-icons i {
+  color: #ccc;
+  text-shadow: 4px 4px 0 #f6f6f6;
+}
+.hexagon .hexagon-body .body-panel .skill-icons i:hover {
+  text-shadow: none;
+}
+.hexagon .hexagon-body .body-panel .skill-icons .fa-html5:hover {
   color: #e54d26;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-css3-alt {
+.hexagon .hexagon-body .body-panel .skill-icons .fa-css3-alt:hover {
   color: #379ad5;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-js {
+.hexagon .hexagon-body .body-panel .skill-icons .fa-js:hover {
   color: #f7df1e;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-sass {
+.hexagon .hexagon-body .body-panel .skill-icons .fa-sass:hover {
   color: #cd6799;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-git-square {
+.hexagon .hexagon-body .body-panel .skill-icons .fa-git-square:hover {
   color: #413000;
 }
 .hexagon .hexagon-body .body-panel .skill-icons img.icon {
   width: 64px;
   height: 64px;
   margin-bottom: -7px;
+  filter: grayscale(1) opacity(0.22) contrast(2.4);
+  box-shadow: 4px 4px 0 #aaa;
+}
+.hexagon .hexagon-body .body-panel .skill-icons img.icon:hover {
+  filter: none;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -264,28 +264,44 @@ header
             
             .skill-icons
                 text-align: center
-                font-size: 64px
-                letter-spacing: 16px
+                font-size: 4em
+                letter-spacing: .25em
 
-                .fa-html5
+                *
+                    transition: .5s
+                    
+                i
+                    color: #ccc
+                    text-shadow: 4px 4px 0 #f6f6f6
+                    
+                    &:hover
+                        text-shadow: none
+
+                .fa-html5:hover
                     color: #e54d26
                 
-                .fa-css3-alt
+                .fa-css3-alt:hover
                     color: #379ad5
 
-                .fa-js
+                .fa-js:hover
                     color: #f7df1e
 
-                .fa-sass
+                .fa-sass:hover
                     color: #cd6799
 
-                .fa-git-square
+                .fa-git-square:hover
                     color: #413000
 
                 img.icon
-                    width: 64px
-                    height: 64px
+                    @include size(64px, 64px)
                     margin-bottom: -7px
+                    filter: grayscale(1) opacity(.22) contrast(2.4)
+                    box-shadow: 4px 4px 0 #aaa
+
+                    &:hover
+                        filter: none
+                        box-shadow: none
+
 
 
 // 1460px max media width for current
