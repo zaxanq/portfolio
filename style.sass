@@ -9,6 +9,7 @@ $color-main-accents: #cb9753
 $color-addit-accents: #aaa
 $color-main-darkaccents: #8c6f4a
 
+$transition: .5s
 
 /*  sizes   */
 $height-header: 512px
@@ -164,10 +165,9 @@ header
         display: flex
         align-items: flex-end
         position: absolute
-        top: -278px
+        transition: $transition
             
         .hexagon-header-description
-            @include size(294px, 132px)
             float: left
             text-align: right
             margin-right: 8px
@@ -175,26 +175,24 @@ header
             #cut-to-shape
                 @include size(100%, 132px)
                 float: left
-                shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
 
             .description-title
                 font-weight: 500
                 color: $color-main-accents
 
         .hexagon-header-photo
-            @include size(192px, 334px)
             float: right
-            background: url('img/photo.png') no-repeat bottom center
+            background: url('img/photo.png') no-repeat top center
+            background-size: cover
+            transition: $transition
 
             &::before
                 content: ''
-                @include size(8px, 192px)
                 display: block
                 position: relative
                 transform: rotate(90deg) skew(30deg)
                 background: $color-main-accents
-                left: 92px
-                top: -44.333px
+                transition: $transition
 
     .hexagon-body
         padding: 64px 0
@@ -270,7 +268,7 @@ header
                 letter-spacing: .25em
 
                 *
-                    transition: .5s
+                    transition: $transition
                     
                 i
                     color: #ccc
@@ -306,4 +304,88 @@ header
 
 
 
-// 1460px max media width for current
+@media (min-width: 1440px)
+    .hexagon-header
+        top: -278px
+
+        .hexagon-header-photo
+            @include size(192px, 334px)
+
+            &::before
+                @include size(8px, 192px)
+                left: 92px
+                top: -44.333px
+
+        .hexagon-header-description
+            @include size(294px, 132px)
+            line-height: 1.2em
+
+            #cut-to-shape
+                shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
+
+
+@media (max-width: 1439px)
+    $width-hexagon: 90vw
+    $height-hexagon: $width-hexagon * (1000/866) / 2
+
+    header
+        > nav
+            > ul
+                width: 40%
+
+                > li
+                    > a
+                        font-size: 1.3em
+
+    .hexagon
+        width: $width-hexagon
+        margin: calc(calc(#{$height-hexagon} / 2) - 128px) auto 0
+
+        &::before,
+        &::after
+            border-left: $width-hexagon/2 solid transparent
+            border-right: $width-hexagon/2 solid transparent
+
+        &::before 
+            border-bottom: $height-hexagon/2 solid $color-main-light
+
+        &::after
+            border-top: $height-hexagon/2 solid $color-main-light
+
+        .hexagon-header
+            top: -250px
+                
+            > .hexagon-header-description
+                @include size(294px, 132px)
+
+                #cut-to-shape
+                    shape-outside: polygon(0 0, 0 100%, 24px 100%, 28px 72%, 58% 16px, 80% 16px, 80% 0)
+
+                > span
+                    font-size: 0.85em
+
+                @-moz-document url-prefix()
+                    @include size(294px, 126px)
+
+                    #cut-to-shape
+                        shape-outside: polygon(0px 0px, 0px 92.43%, 27px 92.41%, 9.52% 66%, 47.66% 16px, 80% 16px, 80% 0px)
+
+                    > span
+                        font-size: 0.80em
+
+            > .hexagon-header-photo
+                @include size(128px, 274px)
+
+                &::before
+                    @include size(8px, 128px)
+                    left: 60px
+                    top: -22.333px
+
+
+@media (max-width: 1366px)
+    header
+        > nav
+            > ul
+                > li
+                    > a
+                        font-size: 1.2em

@@ -206,11 +206,9 @@ header > nav > ul > li > a:hover::before {
   display: flex;
   align-items: flex-end;
   position: absolute;
-  top: -278px;
+  transition: 0.5s;
 }
 .hexagon .hexagon-header .hexagon-header-description {
-  width: 294px;
-  height: 132px;
   float: left;
   text-align: right;
   margin-right: 8px;
@@ -219,28 +217,24 @@ header > nav > ul > li > a:hover::before {
   width: 100%;
   height: 132px;
   float: left;
-  shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0);
 }
 .hexagon .hexagon-header .hexagon-header-description .description-title {
   font-weight: 500;
   color: #cb9753;
 }
 .hexagon .hexagon-header .hexagon-header-photo {
-  width: 192px;
-  height: 334px;
   float: right;
-  background: url("img/photo.png") no-repeat bottom center;
+  background: url("img/photo.png") no-repeat top center;
+  background-size: cover;
+  transition: 0.5s;
 }
 .hexagon .hexagon-header .hexagon-header-photo::before {
   content: "";
-  width: 8px;
-  height: 192px;
   display: block;
   position: relative;
   transform: rotate(90deg) skew(30deg);
   background: #cb9753;
-  left: 92px;
-  top: -44.333px;
+  transition: 0.5s;
 }
 .hexagon .hexagon-body {
   padding: 64px 0;
@@ -350,6 +344,93 @@ header > nav > ul > li > a:hover::before {
 .hexagon .hexagon-body .body-panel .skill-icons img.icon:hover {
   filter: none;
   box-shadow: none;
+}
+
+@media (min-width: 1440px) {
+  .hexagon-header {
+    top: -278px;
+  }
+  .hexagon-header .hexagon-header-photo {
+    width: 192px;
+    height: 334px;
+  }
+  .hexagon-header .hexagon-header-photo::before {
+    width: 8px;
+    height: 192px;
+    left: 92px;
+    top: -44.333px;
+  }
+  .hexagon-header .hexagon-header-description {
+    width: 294px;
+    height: 132px;
+    line-height: 1.2em;
+  }
+  .hexagon-header .hexagon-header-description #cut-to-shape {
+    shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0);
+  }
+}
+@media (max-width: 1439px) {
+  header > nav > ul {
+    width: 40%;
+  }
+  header > nav > ul > li > a {
+    font-size: 1.3em;
+  }
+
+  .hexagon {
+    width: 90vw;
+    margin: calc(calc(51.9630484988vw / 2) - 128px) auto 0;
+  }
+  .hexagon::before, .hexagon::after {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+  }
+  .hexagon::before {
+    border-bottom: 25.9815242494vw solid #fff;
+  }
+  .hexagon::after {
+    border-top: 25.9815242494vw solid #fff;
+  }
+  .hexagon .hexagon-header {
+    top: -250px;
+  }
+  .hexagon .hexagon-header > .hexagon-header-description {
+    width: 294px;
+    height: 132px;
+  }
+  .hexagon .hexagon-header > .hexagon-header-description #cut-to-shape {
+    shape-outside: polygon(0 0, 0 100%, 24px 100%, 28px 72%, 58% 16px, 80% 16px, 80% 0);
+  }
+  .hexagon .hexagon-header > .hexagon-header-description > span {
+    font-size: 0.85em;
+  }
+  @-moz-document url-prefix() {
+    .hexagon .hexagon-header > .hexagon-header-description {
+      width: 294px;
+      height: 126px;
+    }
+    .hexagon .hexagon-header > .hexagon-header-description #cut-to-shape {
+      shape-outside: polygon(0px 0px, 0px 92.43%, 27px 92.41%, 9.52% 66%, 47.66% 16px, 80% 16px, 80% 0px);
+    }
+    .hexagon .hexagon-header > .hexagon-header-description > span {
+      font-size: 0.8em;
+    }
+  }
+  .hexagon .hexagon-header > .hexagon-header-photo {
+    width: 128px;
+    height: 274px;
+  }
+  .hexagon .hexagon-header > .hexagon-header-photo::before {
+    width: 8px;
+    height: 128px;
+    left: 60px;
+    top: -22.333px;
+  }
+}
+@media (max-width: 1366px) {
+  header > nav > ul > li > a {
+    font-size: 1.2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

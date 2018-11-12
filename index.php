@@ -10,7 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-<script type="text/javascript" src="js/scroll.js"></script>
     <header>
         <div class="header-logo">
             <div class="header-logo-link">
@@ -70,5 +69,6 @@
         </div>
     </div>
 <script type="text/javascript" src="js/logo.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 </body>
 </html>
