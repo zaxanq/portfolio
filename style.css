@@ -91,7 +91,6 @@ header {
   background: #222;
 }
 header .header-logo {
-  height: 384px;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -109,22 +108,21 @@ header .header-logo .header-logo-link {
 }
 header .header-logo .header-logo-link a {
   text-align: center;
-  font: 300 64px/0.8 "Lemon/Milk";
   color: #cb9753;
+  transition: 0.5s;
 }
 header .header-logo .header-logo-link::before {
   content: "";
-  width: 338px;
-  height: 250px;
   display: block;
   position: absolute;
   background: url("img/logo-background-part.png") no-repeat center center;
+  background-size: contain;
   filter: opacity(0.16);
   z-index: -1;
+  transition: 0.5s;
 }
 header .header-logo__absolute {
   position: absolute;
-  top: 448px !important;
 }
 header > nav {
   width: 1600px;
@@ -149,10 +147,11 @@ header > nav > ul > li {
   height: inherit;
   float: left;
   flex: 1;
+  transition: 0.5s;
 }
 header > nav > ul > li > a {
   width: 100%;
-  height: inherit;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,19 +162,14 @@ header > nav > ul > li > a {
   color: #fff;
 }
 header > nav > ul > li > a:hover {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
   font-weight: 300;
   color: #cb9753;
-  text-shadow: 0 0 50px #cb9753;
 }
 header > nav > ul > li > a:hover::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 48px solid transparent;
-  border-left: 144px solid #222;
-  border-right: 144px solid #222;
 }
 
 .hexagon {
@@ -331,8 +325,8 @@ header > nav > ul > li > a:hover::before {
 .hexagon .hexagon-body .body-panel .skill-icons .fa-sass:hover {
   color: #cd6799;
 }
-.hexagon .hexagon-body .body-panel .skill-icons .fa-git-square:hover {
-  color: #413000;
+.hexagon .hexagon-body .body-panel .skill-icons .fa-github:hover {
+  color: #222222;
 }
 .hexagon .hexagon-body .body-panel .skill-icons img.icon {
   width: 64px;
@@ -346,7 +340,14 @@ header > nav > ul > li > a:hover::before {
   box-shadow: none;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1450px) and (orientation: landscape) {
+  header li > a:hover::before {
+    border-bottom: 48px solid transparent;
+    border-left: 144px solid #222;
+    border-right: 144px solid #222;
+  }
+}
+@media (min-width: 1430px) and (orientation: landscape) {
   .hexagon-header {
     top: -278px;
   }
@@ -368,13 +369,30 @@ header > nav > ul > li > a:hover::before {
   .hexagon-header .hexagon-header-description #cut-to-shape {
     shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0);
   }
-}
-@media (max-width: 1439px) {
-  header > nav > ul {
-    width: 40%;
+
+  .header-logo__absolute {
+    top: 448px !important;
   }
+}
+@media (min-width: 1350px) and (orientation: landscape) {
+  header > .header-logo {
+    height: 384px;
+  }
+  header > .header-logo > .header-logo-link a {
+    font: 300 64px/0.8 "Lemon/Milk";
+  }
+  header > .header-logo > .header-logo-link::before {
+    width: 338px;
+    height: 250px;
+  }
+}
+@media (max-width: 1429px) and (orientation: landscape) {
   header > nav > ul > li > a {
     font-size: 1.3em;
+  }
+
+  .header-logo__absolute {
+    top: 408px !important;
   }
 
   .hexagon {
@@ -427,9 +445,80 @@ header > nav > ul > li > a:hover::before {
     top: -22.333px;
   }
 }
-@media (max-width: 1366px) {
+@media (min-width: 1270px) and (orientation: landscape) {
+  header li {
+    height: inherit;
+  }
+  header li > a:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    text-shadow: 0 0 50px #cb9753;
+  }
+
+  .hexagon-header-photo {
+    visibility: initial;
+  }
+}
+@media (min-width: 1270px) and (max-width: 1449px) and (orientation: landscape) {
+  header > nav > ul {
+    width: 39vw;
+  }
+  header > nav > ul li > a:hover::before {
+    border-bottom: 3.25vw solid transparent;
+    border-left: 9.75vw solid #222;
+    border-right: 9.75vw solid #222;
+  }
+}
+@media (max-width: 1349px) and (orientation: landscape) {
+  header {
+    width: 100%;
+    height: 408px;
+  }
   header > nav > ul > li > a {
     font-size: 1.2em;
+  }
+
+  .header-logo {
+    height: 280px;
+  }
+  .header-logo > .header-logo-link a {
+    font: 300 48px/0.8 "Lemon/Milk";
+  }
+  .header-logo > .header-logo-link::before {
+    width: 338px;
+    height: 192px;
+  }
+}
+@media (max-width: 1269px) and (orientation: landscape) {
+  header > nav > ul {
+    width: 19.5vw;
+    flex-flow: column;
+  }
+  header > nav > ul > li {
+    height: 50%;
+  }
+  header > nav > ul > li > a:hover {
+    text-shadow: 0 0 20px #cb9753;
+  }
+  header > nav > ul > li > a:hover::before {
+    border-top: 24px solid #222;
+    border-bottom: 24px solid #222;
+  }
+  header > nav > ul:first-child > li > a:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  header > nav > ul:first-child > li > a:hover::before {
+    border-left: 16px solid transparent;
+    left: calc(100% - calc(96px / 6));
+  }
+  header > nav > ul:last-child > li > a:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  header > nav > ul:last-child > li > a:hover::before {
+    border-right: 16px solid transparent;
+  }
+
+  .hexagon-header-photo {
+    visibility: hidden;
   }
 }
 

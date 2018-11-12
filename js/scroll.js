@@ -1,8 +1,6 @@
 "use strict";
 
 let menuElements = $(".menu-element");
-console.log(menuElements);
-console.log(menuElements.toArray());
 $(".menu-element")
   .toArray()
   .forEach(element => {

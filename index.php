@@ -61,7 +61,7 @@
                     <i class="fab fa-css3-alt"></i>
                     <i class="fab fa-js"></i>
                     <i class="fab fa-sass"></i>
-                    <i class="fab fa-git-square"></i>
+                    <i class="fab fa-github"></i>
                     <img src="img/photoshop_icon.svg" class="icon">
                     <img src="img/illustrator_icon.svg" class="icon">
                 </section>

@@ -59,7 +59,6 @@ header
     background: $color-main-dark
 
     .header-logo
-        height: 384px
         position: fixed
         @include flex-center
         align-items: center
@@ -74,21 +73,21 @@ header
 
             a
                 text-align: center
-                font: 300 64px/0.8 'Lemon/Milk'
                 color: $color-main-accents
+                transition: $transition
 
             &::before
                 content: ''
-                @include size(338px, 250px)
                 display: block
                 position: absolute
                 background: url('img/logo-background-part.png') no-repeat center center
+                background-size: contain
                 filter: opacity(0.16)
                 z-index: -1
+                transition: $transition
 
     .header-logo__absolute
         position: absolute
-        top: 448px !important
 
     > nav
         @include size($width-nav, $height-nav)
@@ -110,9 +109,10 @@ header
                 height: inherit
                 float: left
                 flex: 1
+                transition: $transition
 
                 > a
-                    @include size(100%, inherit)
+                    @include size(100%, 100%)
                     @include flex-center
                     align-items: center
                     position: relative
@@ -122,19 +122,14 @@ header
                     color: $color-main-light
 
                     &:hover
-                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
                         font-weight: 300
                         color: $color-main-accents
-                        text-shadow: 0 0 50px $color-main-accents
                         
                         &::before
                             content: ''
                             position: absolute
                             top: 0
                             left: 0
-                            border-bottom: ($width-menu / 12) solid transparent
-                            border-left: ($width-menu / 4) solid $color-main-dark
-                            border-right: ($width-menu / 4) solid $color-main-dark
 .hexagon
     width: $width-hexagon
     min-height: $height-hexagon
@@ -289,8 +284,8 @@ header
                 .fa-sass:hover
                     color: #cd6799
 
-                .fa-git-square:hover
-                    color: #413000
+                .fa-github:hover
+                    color: #222222
 
                 img.icon
                     @include size(64px, 64px)
@@ -304,7 +299,31 @@ header
 
 
 
-@media (min-width: 1440px)
+// --------------------------------------------------------------
+// ----------------- RESOLUTION [PC] + [BIGGER] -----------------
+// --------------------------------------------------------------
+// navigation modified to not go into hexagon
+
+@media (min-width: 1450px) and (orientation: landscape)
+    $width-menu: ($width-nav - 448px) / 2
+                 
+    header
+        li
+            > a:hover
+                &::before
+                    border-bottom: ($width-menu / 12) solid transparent
+                    border-left: ($width-menu / 4) solid $color-main-dark
+                    border-right: ($width-menu / 4) solid $color-main-dark
+
+
+
+// --------------------------------------------------------------
+// ------------- RESOLUTION [PC] + [1440 OR BIGGER] -------------
+// --------------------------------------------------------------
+// photo and menu font sizes are reduced
+
+@media (min-width: 1430px) and (orientation: landscape)
+                    
     .hexagon-header
         top: -278px
 
@@ -323,19 +342,48 @@ header
             #cut-to-shape
                 shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
 
+    .header-logo__absolute
+        top: 448px !important
 
-@media (max-width: 1439px)
+
+
+// --------------------------------------------------------------
+// ------------- RESOLUTION [PC] + [1366 OR BIGGER] -------------
+// --------------------------------------------------------------
+// logo, header and menu font sizes are reduced
+
+@media (min-width: 1350px) and (orientation: landscape)
+    header
+        > .header-logo
+            height: 384px
+
+            > .header-logo-link
+                a
+                    font: 300 64px/0.8 'Lemon/Milk'
+
+                &::before
+                    @include size(338px, 250px)
+
+
+
+// --------------------------------------------------------------
+// ------------------ RESOLUTION [PC] + [1366] ------------------
+// --------------------------------------------------------------
+
+@media (max-width: 1429px) and (orientation: landscape)
     $width-hexagon: 90vw
     $height-hexagon: $width-hexagon * (1000/866) / 2
-
+                        
     header
         > nav
             > ul
-                width: 40%
-
                 > li
                     > a
                         font-size: 1.3em
+    
+
+    .header-logo__absolute
+        top: 408px !important
 
     .hexagon
         width: $width-hexagon
@@ -351,6 +399,7 @@ header
 
         &::after
             border-top: $height-hexagon/2 solid $color-main-light
+
 
         .hexagon-header
             top: -250px
@@ -382,10 +431,118 @@ header
                     top: -22.333px
 
 
-@media (max-width: 1366px)
+
+// --------------------------------------------------------------
+// ------------- RESOLUTION [PC] + [1280 OR BIGGER] -------------
+// --------------------------------------------------------------
+
+@media (min-width: 1270px) and (orientation: landscape)
     header
+        li
+            height: inherit
+
+            > a:hover
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+                text-shadow: 0 0 50px $color-main-accents
+
+
+    .hexagon-header-photo
+        visibility: initial
+
+// --------------------------------------------------------------
+// -------------- RESOLUTION [PC] + [1280 TO 1439] --------------
+// --------------------------------------------------------------
+    
+@media (min-width: 1270px) and (max-width: 1449px) and (orientation: landscape)
+    $width-menu: 39vw
+                 
+    header
+        > nav
+            > ul
+                width: $width-menu
+                
+                li
+                    > a:hover
+                        &::before
+                            border-bottom: ($width-menu / 12) solid transparent
+                            border-left: ($width-menu / 4) solid $color-main-dark
+                            border-right: ($width-menu / 4) solid $color-main-dark
+
+
+
+
+// --------------------------------------------------------------
+// ------------------ RESOLUTION [PC] + [1280] ------------------
+// --------------------------------------------------------------
+
+@media (max-width: 1349px) and (orientation: landscape)
+    $height-header: 408px
+
+    header
+        @include size(100%, $height-header)
+
         > nav
             > ul
                 > li
                     > a
                         font-size: 1.2em
+
+    .header-logo
+        height: 280px
+
+        > .header-logo-link
+            a
+                font: 300 48px/0.8 'Lemon/Milk'
+                
+            &::before
+                @include size(338px, 192px)
+
+
+
+// --------------------------------------------------------------
+// ------------------ RESOLUTION [PC] + [1024] ------------------
+// --------------------------------------------------------------
+// photo is hidden, ul elements go from one next to another to one above the other
+
+@media (max-width: 1269px) and (orientation: landscape)
+    $width-menu: 19.5vw
+
+    header
+        > nav
+            > ul
+                width: $width-menu
+                flex-flow: column
+
+                > li
+                    height: 50%
+
+                    > a
+
+                        &:hover
+                            text-shadow: 0 0 20px $color-main-accents
+
+                            &::before
+                                border-top: $height-nav / 4 solid $color-main-dark
+                                border-bottom: $height-nav / 4 solid $color-main-dark
+                            
+            > ul:first-child
+                > li
+                    > a
+                        &:hover
+                            background: linear-gradient(to left, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+
+                            &::before
+                                border-left: $height-nav / 6 solid transparent
+                                left: calc(100% - calc(#{$height-nav} / 6))
+                            
+            > ul:last-child
+                > li
+                    > a
+                        &:hover         
+                            background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+
+                            &::before
+                                border-right: $height-nav / 6 solid transparent
+
+    .hexagon-header-photo
+        visibility: hidden
