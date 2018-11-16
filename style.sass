@@ -231,7 +231,6 @@ header
 
             span
                 display: block
-                font-size: 1.1em
                 line-height: 1.8
                 padding-left: 16px
                 margin: 16px 128px 16px 76px
@@ -259,7 +258,6 @@ header
             
             .skill-icons
                 text-align: center
-                font-size: 4em
                 letter-spacing: .25em
 
                 *
@@ -288,8 +286,6 @@ header
                     color: #222222
 
                 img.icon
-                    @include size(64px, 64px)
-                    margin-bottom: -7px
                     filter: grayscale(1) opacity(.22) contrast(2.4)
                     box-shadow: 4px 4px 0 #aaa
 
@@ -298,15 +294,19 @@ header
                         box-shadow: none
 
 
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR 1440p + HIGHER
 
-// --------------------------------------------------------------
-// ----------------- RESOLUTION [PC] + [BIGGER] -----------------
-// --------------------------------------------------------------
-// navigation modified to not go into hexagon
+@media (min-width: 1430px) and (orientation: landscape)
+    // hexagon is now rigid with width of 1340px
+    $width-hexagon: 1340px
+    $height-hexagon: $width-hexagon * (1000/866) / 2
 
-@media (min-width: 1450px) and (orientation: landscape)
+    // menus are now rigid with width of 576px 
     $width-menu: ($width-nav - 448px) / 2
                  
+    // menu-el ::befores are rigid as well
     header
         li
             > a:hover
@@ -315,15 +315,7 @@ header
                     border-left: ($width-menu / 4) solid $color-main-dark
                     border-right: ($width-menu / 4) solid $color-main-dark
 
-
-
-// --------------------------------------------------------------
-// ------------- RESOLUTION [PC] + [1440 OR BIGGER] -------------
-// --------------------------------------------------------------
-// photo and menu font sizes are reduced
-
-@media (min-width: 1430px) and (orientation: landscape)
-                    
+    // header (photo+description) are now 100% size                    
     .hexagon-header
         top: -278px
 
@@ -342,17 +334,31 @@ header
             #cut-to-shape
                 shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
 
+
+    // logo stops at 448px
     .header-logo__absolute
         top: 448px !important
 
+    .hexagon-body
+        .body-panel
+            span
+                font-size: 1.1em
+            
+            .skill-icons
+                font-size: 4em
+
+            img.icon
+                @include size(64px, 64px)
+                margin-bottom: -7px
 
 
-// --------------------------------------------------------------
-// ------------- RESOLUTION [PC] + [1366 OR BIGGER] -------------
-// --------------------------------------------------------------
-// logo, header and menu font sizes are reduced
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR 1366p + HIGHER
 
 @media (min-width: 1350px) and (orientation: landscape)
+
+    // logo size is now 100%
     header
         > .header-logo
             height: 384px
@@ -366,24 +372,15 @@ header
 
 
 
-// --------------------------------------------------------------
-// ------------------ RESOLUTION [PC] + [1366] ------------------
-// --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR SMALLER + UP TO 1366px
 
 @media (max-width: 1429px) and (orientation: landscape)
+
+    // hexagon is responsive
     $width-hexagon: 90vw
     $height-hexagon: $width-hexagon * (1000/866) / 2
-                        
-    header
-        > nav
-            > ul
-                > li
-                    > a
-                        font-size: 1.3em
-    
-
-    .header-logo__absolute
-        top: 408px !important
 
     .hexagon
         width: $width-hexagon
@@ -400,7 +397,7 @@ header
         &::after
             border-top: $height-hexagon/2 solid $color-main-light
 
-
+        //hexagon description and photo are small (not 100%)
         .hexagon-header
             top: -250px
                 
@@ -430,11 +427,35 @@ header
                     left: 60px
                     top: -22.333px
 
+    // menu font size is "medium"              
+    header
+        > nav
+            > ul
+                > li
+                    > a
+                        font-size: 1.3em
+    // logo stops at 408px
+    .header-logo__absolute
+        top: 408px !important
 
+    // smaller content font size and icon size
+    .hexagon-body
+        .body-panel
+            span
+                font-size: 1em
+            
+            .skill-icons
+                font-size: 3em
 
-// --------------------------------------------------------------
-// ------------- RESOLUTION [PC] + [1280 OR BIGGER] -------------
-// --------------------------------------------------------------
+            .icon
+                @include size(48px,48px)
+                margin-bottom: -5px
+
+    
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR 1280px AND OVER
 
 @media (min-width: 1270px) and (orientation: landscape)
     header
@@ -449,11 +470,14 @@ header
     .hexagon-header-photo
         visibility: initial
 
-// --------------------------------------------------------------
-// -------------- RESOLUTION [PC] + [1280 TO 1439] --------------
-// --------------------------------------------------------------
-    
-@media (min-width: 1270px) and (max-width: 1449px) and (orientation: landscape)
+
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR 1280px - 1440px
+   
+@media (min-width: 1270px) and (max-width: 1479px) and (orientation: landscape)
+    // menus are now responsive
     $width-menu: 39vw
                  
     header
@@ -461,31 +485,23 @@ header
             > ul
                 width: $width-menu
                 
+                // menu-el ::befores are responsive as well
                 li
                     > a:hover
                         &::before
                             border-bottom: ($width-menu / 12) solid transparent
-                            border-left: ($width-menu / 4) solid $color-main-dark
-                            border-right: ($width-menu / 4) solid $color-main-dark
+                            border-left: (($width-menu / 4) + 0.05vw) solid $color-main-dark
+                            border-right: (($width-menu / 4) + 0.05vw) solid $color-main-dark
 
 
 
-
-// --------------------------------------------------------------
-// ------------------ RESOLUTION [PC] + [1280] ------------------
-// --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR SMALLER AND UP TO 1280px
 
 @media (max-width: 1349px) and (orientation: landscape)
+    //header is now small (408px instead of 512)
     $height-header: 408px
-
-    header
-        @include size(100%, $height-header)
-
-        > nav
-            > ul
-                > li
-                    > a
-                        font-size: 1.2em
 
     .header-logo
         height: 280px
@@ -497,14 +513,38 @@ header
             &::before
                 @include size(338px, 192px)
 
+    header
+        @include size(100%, $height-header)
 
+        // menu font size is "small"
+        > nav
+            > ul
+                > li
+                    > a
+                        font-size: 1.2em
+    // logo stops at 356px
+    .header-logo__absolute
+        top: 356px !important
+    // smaller content font size and icon size
+    .hexagon-body
+        .body-panel
+            span
+                font-size: 0.9em
+            
+            .skill-icons
+                font-size: 3em
 
-// --------------------------------------------------------------
-// ------------------ RESOLUTION [PC] + [1024] ------------------
-// --------------------------------------------------------------
-// photo is hidden, ul elements go from one next to another to one above the other
+            .icon
+                @include size(48px,48px)
+                margin-bottom: -5px
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // FOR SMALLER AND UP TO 1154px(?)
 
 @media (max-width: 1269px) and (orientation: landscape)
+
+    // menus are now responsive AND stacked
     $width-menu: 19.5vw
 
     header
@@ -517,7 +557,7 @@ header
                     height: 50%
 
                     > a
-
+                        
                         &:hover
                             text-shadow: 0 0 20px $color-main-accents
 
@@ -544,5 +584,9 @@ header
                             &::before
                                 border-right: $height-nav / 6 solid transparent
 
+    // photo is now hidden
     .hexagon-header-photo
         visibility: hidden
+    // logo stops at 292px
+    .header-logo__absolute
+        top: 332px !important

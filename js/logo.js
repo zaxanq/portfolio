@@ -8,7 +8,9 @@ let headerScrollHeight;
 
 $(window).on("scroll", function() {
   if (window.outerWidth >= 1430) logoScrollHeight = 448;
-  else logoScrollHeight = 404;
+  else if (window.outerWidth >= 1350) logoScrollHeight = 408;
+  else if (window.outerWidth >= 1270) logoScrollHeight = 356;
+  else logoScrollHeight = 332;
 
   if (this.scrollY > logoScrollHeight) logo.addClass("header-logo__absolute");
   else if (this.scrollY < logoScrollHeight)
