@@ -173,8 +173,6 @@ header > nav > ul > li > a:hover::before {
 }
 
 .hexagon {
-  width: 1340px;
-  min-height: 773.6720554273px;
   position: relative;
   background-color: #fff;
 }
@@ -182,17 +180,13 @@ header > nav > ul > li > a:hover::before {
   content: "";
   width: 0;
   position: absolute;
-  border-left: 670px solid transparent;
-  border-right: 670px solid transparent;
 }
 .hexagon::before {
-  border-bottom: 386.8360277136px solid #fff;
-  bottom: 99.9998%;
+  bottom: 100%;
 }
 .hexagon::after {
   width: 0;
-  border-top: 386.8360277136px solid #fff;
-  top: 99.9998%;
+  top: 100%;
   margin-bottom: 64px;
 }
 .hexagon .hexagon-header {
@@ -330,6 +324,21 @@ header > nav > ul > li > a:hover::before {
 }
 
 @media (min-width: 1430px) and (orientation: landscape) {
+  .hexagon {
+    width: 1340px;
+    margin: calc(calc(773.6720554273px / 2) - 128px) auto 0;
+  }
+  .hexagon::before, .hexagon::after {
+    border-left: 670px solid transparent;
+    border-right: 670px solid transparent;
+  }
+  .hexagon::before {
+    border-bottom: 386.8360277136px solid #fff;
+  }
+  .hexagon::after {
+    border-top: 386.8360277136px solid #fff;
+  }
+
   header li > a:hover::before {
     border-bottom: 48px solid transparent;
     border-left: 144px solid #222;
@@ -359,7 +368,7 @@ header > nav > ul > li > a:hover::before {
   }
 
   .header-logo__absolute {
-    top: 448px !important;
+    top: 468px !important;
   }
 
   .hexagon-body .body-panel span {
@@ -389,6 +398,7 @@ header > nav > ul > li > a:hover::before {
 @media (max-width: 1429px) and (orientation: landscape) {
   .hexagon {
     width: 90vw;
+    margin: calc(calc(51.9630484988vw / 2) - 128px) auto 0;
   }
   .hexagon::before, .hexagon::after {
     border-left: 45vw solid transparent;
@@ -441,7 +451,7 @@ header > nav > ul > li > a:hover::before {
   }
 
   .header-logo__absolute {
-    top: 408px !important;
+    top: 448px !important;
   }
 
   .hexagon-body .body-panel span {
@@ -500,7 +510,7 @@ header > nav > ul > li > a:hover::before {
   }
 
   .header-logo__absolute {
-    top: 356px !important;
+    top: 448px !important;
   }
 
   .hexagon-body .body-panel span {
@@ -553,10 +563,6 @@ header > nav > ul > li > a:hover::before {
   }
 }
 @media (orientation: landscape) {
-  .hexagon {
-    margin: calc(calc(773.6720554273px / 2) - 128px) auto 0;
-  }
-
   .hexagon-body {
     padding: 64px 0;
   }
@@ -568,7 +574,9 @@ header > nav > ul > li > a:hover::before {
 @media (orientation: portrait) {
   .hexagon {
     width: 90vw;
-    margin: -40vw auto 0;
+    margin: 0 5vw;
+    position: absolute !important;
+    top: 480px;
   }
   .hexagon::before, .hexagon::after {
     border-left: 45vw solid transparent;

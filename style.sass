@@ -19,9 +19,6 @@ $height-nav: 96px
 
 $width-menu: ($width-nav - 448px) / 2
 
-$width-hexagon: 1340px
-$height-hexagon: $width-hexagon * (1000/866) / 2
-
 $width-bodypanel: 192px
 $height-bodypanel: 48px
 $margin-bodypanel: 10px
@@ -130,9 +127,8 @@ header
                             position: absolute
                             top: 0
                             left: 0
+
 .hexagon
-    width: $width-hexagon
-    min-height: $height-hexagon
     position: relative
     background-color: $color-main-light
 
@@ -141,16 +137,12 @@ header
         content: ""
         width: 0
         position: absolute
-        border-left: $width-hexagon/2 solid transparent
-        border-right: $width-hexagon/2 solid transparent
 
-    &::before 
-        border-bottom: $height-hexagon/2 solid $color-main-light
+    &::before
         bottom: 100%
 
-    &::after 
+    &::after
         width: 0
-        border-top: $height-hexagon/2 solid $color-main-light
         top: 100%
         margin-bottom: 64px
 
@@ -298,7 +290,23 @@ header
     // hexagon is now rigid with width of 1340px
     $width-hexagon: 1340px
     $height-hexagon: $width-hexagon * (1000/866) / 2
+    $hexagon-top-margin: 128px
 
+    .hexagon
+        width: $width-hexagon
+        margin: calc(calc(#{$height-hexagon} / 2) - #{$hexagon-top-margin}) auto 0
+
+        &::before,
+        &::after
+            border-left: $width-hexagon/2 solid transparent
+            border-right: $width-hexagon/2 solid transparent
+
+        &::before 
+            border-bottom: $height-hexagon/2 solid $color-main-light
+
+        &::after
+            border-top: $height-hexagon/2 solid $color-main-light
+            
     // menus are now rigid with width of 576px 
     $width-menu: ($width-nav - 448px) / 2
                  
@@ -331,9 +339,9 @@ header
                 shape-outside: polygon(0 0, 0 100%, 24px 100%, 24px 62%, 48% 16px, 80% 16px, 80% 0)
 
 
-    // logo stops at 448px
+    // logo stops at 468px
     .header-logo__absolute
-        top: 448px !important
+        top: 468px !important
 
     .hexagon-body
         .body-panel
@@ -376,9 +384,11 @@ header
     // hexagon is responsive
     $width-hexagon: 90vw
     $height-hexagon: $width-hexagon * (1000/866) / 2
+    $hexagon-top-margin: 128px
 
     .hexagon
         width: $width-hexagon
+        margin: calc(calc(#{$height-hexagon} / 2) - #{$hexagon-top-margin}) auto 0
 
         &::before,
         &::after
@@ -428,9 +438,9 @@ header
                 > li
                     > a
                         font-size: 1.3em
-    // logo stops at 408px
+    // logo stops at 448px
     .header-logo__absolute
-        top: 408px !important
+        top: 448px !important
 
     // smaller content font size and icon size
     .hexagon-body
@@ -516,9 +526,9 @@ header
                 > li
                     > a
                         font-size: 1.2em
-    // logo stops at 356px
+    // logo stops at 448px
     .header-logo__absolute
-        top: 356px !important
+        top: 448px !important
     // smaller content font size and icon size
     .hexagon-body
         .body-panel
@@ -594,11 +604,6 @@ header
     // ANYTHING HORIZONTAL
 
 @media (orientation: landscape)
-    $hexagon-top-margin: 128px
-
-    .hexagon
-        margin: calc(calc(#{$height-hexagon} / 2) - #{$hexagon-top-margin}) auto 0
-
     .hexagon-body
         padding: 64px 0
 
@@ -624,7 +629,9 @@ header
     
     .hexagon
         width: $width-hexagon
-        margin: -$hexagon-top-margin auto 0
+        margin: 0 5vw
+        position: absolute !important
+        top: 480px
 
         &::before,
         &::after
