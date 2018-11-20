@@ -134,7 +134,6 @@ header
     width: $width-hexagon
     min-height: $height-hexagon
     position: relative
-    margin: calc(calc(#{$height-hexagon} / 2) - 128px) auto 0
     background-color: $color-main-light
 
     &::before,
@@ -190,7 +189,6 @@ header
                 transition: $transition
 
     .hexagon-body
-        padding: 64px 0
 
         .body-panel
             padding-top: 64px
@@ -231,9 +229,7 @@ header
 
             span
                 display: block
-                line-height: 1.8
                 padding-left: 16px
-                margin: 16px 128px 16px 76px
                 border-left: 4px solid $color-main-accents
                 
                 > p
@@ -377,14 +373,12 @@ header
     // FOR SMALLER + UP TO 1366px
 
 @media (max-width: 1429px) and (orientation: landscape)
-
     // hexagon is responsive
     $width-hexagon: 90vw
     $height-hexagon: $width-hexagon * (1000/866) / 2
 
     .hexagon
         width: $width-hexagon
-        margin: calc(calc(#{$height-hexagon} / 2) - 128px) auto 0
 
         &::before,
         &::after
@@ -477,7 +471,7 @@ header
     // FOR 1280px - 1440px
    
 @media (min-width: 1270px) and (max-width: 1479px) and (orientation: landscape)
-    // menus are now responsive
+    // menus are now responsive 
     $width-menu: 39vw
                  
     header
@@ -538,6 +532,8 @@ header
                 @include size(48px,48px)
                 margin-bottom: -5px
 
+
+
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR SMALLER AND UP TO 1154px(?)
@@ -590,3 +586,168 @@ header
     // logo stops at 292px
     .header-logo__absolute
         top: 332px !important
+
+
+    
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // ANYTHING HORIZONTAL
+
+@media (orientation: landscape)
+    $hexagon-top-margin: 128px
+
+    .hexagon
+        margin: calc(calc(#{$height-hexagon} / 2) - #{$hexagon-top-margin}) auto 0
+
+    .hexagon-body
+        padding: 64px 0
+
+        .body-panel
+            span
+                margin: 16px 128px 16px 76px
+                line-height: 1.8
+
+
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // HANDHELD 
+
+@media (orientation: portrait)
+    $hexagon-top-margin: 40vw
+    $margin-menu: 5vw
+    $width-menu: (100vw/2) - $margin-menu
+
+    // hexagon is responsive with width of 90vw
+    $width-hexagon: 90vw
+    $height-hexagon: $width-hexagon * (1000/866) / 2
+    
+    .hexagon
+        width: $width-hexagon
+        margin: -$hexagon-top-margin auto 0
+
+        &::before,
+        &::after
+            border-left: $width-hexagon/2 solid transparent
+            border-right: $width-hexagon/2 solid transparent
+
+        &::before 
+            border-bottom: $height-hexagon/2 solid $color-main-light
+
+        &::after
+            border-top: $height-hexagon/2 solid $color-main-light
+    
+    header
+        @include size(100vw, 100vh)
+
+        > nav
+            bottom: 70vw
+            z-index: 11 !important
+
+            > ul
+                width: $width-menu
+                flex-flow: column
+
+                > li
+                    width: 36vw
+                    height: 50%
+
+                    > a
+                        font-size: 1.4em
+                        
+                        &:hover
+                            text-shadow: 0 0 20px $color-main-accents
+
+                            &::before
+                                border-top: $height-nav / 4 solid $color-main-dark
+                                border-bottom: $height-nav / 4 solid $color-main-dark
+                            
+            > ul:first-child
+                margin-left: $margin-menu
+                align-items: flex-start !important
+
+                > li
+                    > a
+                        justify-content: flex-start !important
+
+                        &:hover
+                            background: linear-gradient(to left, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+
+                            &::before
+                                border-left: $height-nav / 6 solid transparent
+                                left: calc(100% - calc(#{$height-nav} / 6))
+                            
+            > ul:last-child
+                margin-right: $margin-menu
+                align-items: flex-end !important
+
+                > li
+                    > a
+                        justify-content: flex-end !important
+
+                        &:hover         
+                            background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
+
+                            &::before
+                                border-right: $height-nav / 6 solid transparent
+
+    .hexagon-body
+        padding: 384px 0
+
+        .body-panel
+            span
+                margin: 16px 48px 16px 16px
+                line-height: 1.65
+            
+            .skill-icons
+                font-size: 2em
+
+            .icon
+                @include size(32px,32px)
+                margin-bottom: -3px
+
+    .header-logo
+        height: 300px
+        position: absolute !important
+
+        > .header-logo-link
+            a
+                font: 300 48px/0.8 'Lemon/Milk'
+                
+            &::before
+                @include size(338px, 192px)
+
+    //hexagon description and photo are small (not 100%)
+    .hexagon-header
+        top: 181px
+        width: 100% !important
+            
+        > .hexagon-header-description
+            @include size(100%, 132px)
+            position: absolute
+            top: 16px
+            padding: 0 8%
+            font-size: 1.2em
+            line-height: 1.5em
+            text-align: center !important
+            margin: 0 !important
+
+            .description-title
+                display: block
+
+
+            #cut-to-shape
+                display: none
+
+            > span
+                font-size: 0.85em
+
+        > .hexagon-header-photo
+            @include size(128px, 274px)
+            left: 32px
+            position: absolute
+
+            &::before
+                @include size(8px, 128px)
+                left: 60px
+                top: -22.333px

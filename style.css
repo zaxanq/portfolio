@@ -176,7 +176,6 @@ header > nav > ul > li > a:hover::before {
   width: 1340px;
   min-height: 773.6720554273px;
   position: relative;
-  margin: calc(calc(773.6720554273px / 2) - 128px) auto 0;
   background-color: #fff;
 }
 .hexagon::before, .hexagon::after {
@@ -188,12 +187,12 @@ header > nav > ul > li > a:hover::before {
 }
 .hexagon::before {
   border-bottom: 386.8360277136px solid #fff;
-  bottom: 100%;
+  bottom: 99.9998%;
 }
 .hexagon::after {
   width: 0;
   border-top: 386.8360277136px solid #fff;
-  top: 100%;
+  top: 99.9998%;
   margin-bottom: 64px;
 }
 .hexagon .hexagon-header {
@@ -229,9 +228,6 @@ header > nav > ul > li > a:hover::before {
   transform: rotate(90deg) skew(30deg);
   background: #cb9753;
   transition: 0.5s;
-}
-.hexagon .hexagon-body {
-  padding: 64px 0;
 }
 .hexagon .hexagon-body .body-panel {
   padding-top: 64px;
@@ -272,9 +268,7 @@ header > nav > ul > li > a:hover::before {
 }
 .hexagon .hexagon-body .body-panel span {
   display: block;
-  line-height: 1.8;
   padding-left: 16px;
-  margin: 16px 128px 16px 76px;
   border-left: 4px solid #cb9753;
 }
 .hexagon .hexagon-body .body-panel span > p {
@@ -395,7 +389,6 @@ header > nav > ul > li > a:hover::before {
 @media (max-width: 1429px) and (orientation: landscape) {
   .hexagon {
     width: 90vw;
-    margin: calc(calc(51.9630484988vw / 2) - 128px) auto 0;
   }
   .hexagon::before, .hexagon::after {
     border-left: 45vw solid transparent;
@@ -557,6 +550,154 @@ header > nav > ul > li > a:hover::before {
 
   .header-logo__absolute {
     top: 332px !important;
+  }
+}
+@media (orientation: landscape) {
+  .hexagon {
+    margin: calc(calc(773.6720554273px / 2) - 128px) auto 0;
+  }
+
+  .hexagon-body {
+    padding: 64px 0;
+  }
+  .hexagon-body .body-panel span {
+    margin: 16px 128px 16px 76px;
+    line-height: 1.8;
+  }
+}
+@media (orientation: portrait) {
+  .hexagon {
+    width: 90vw;
+    margin: -40vw auto 0;
+  }
+  .hexagon::before, .hexagon::after {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+  }
+  .hexagon::before {
+    border-bottom: 25.9815242494vw solid #fff;
+  }
+  .hexagon::after {
+    border-top: 25.9815242494vw solid #fff;
+  }
+
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+  header > nav {
+    bottom: 70vw;
+    z-index: 11 !important;
+  }
+  header > nav > ul {
+    width: 45vw;
+    flex-flow: column;
+  }
+  header > nav > ul > li {
+    width: 36vw;
+    height: 50%;
+  }
+  header > nav > ul > li > a {
+    font-size: 1.4em;
+  }
+  header > nav > ul > li > a:hover {
+    text-shadow: 0 0 20px #cb9753;
+  }
+  header > nav > ul > li > a:hover::before {
+    border-top: 24px solid #222;
+    border-bottom: 24px solid #222;
+  }
+  header > nav > ul:first-child {
+    margin-left: 5vw;
+    align-items: flex-start !important;
+  }
+  header > nav > ul:first-child > li > a {
+    justify-content: flex-start !important;
+  }
+  header > nav > ul:first-child > li > a:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  header > nav > ul:first-child > li > a:hover::before {
+    border-left: 16px solid transparent;
+    left: calc(100% - calc(96px / 6));
+  }
+  header > nav > ul:last-child {
+    margin-right: 5vw;
+    align-items: flex-end !important;
+  }
+  header > nav > ul:last-child > li > a {
+    justify-content: flex-end !important;
+  }
+  header > nav > ul:last-child > li > a:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  header > nav > ul:last-child > li > a:hover::before {
+    border-right: 16px solid transparent;
+  }
+
+  .hexagon-body {
+    padding: 384px 0;
+  }
+  .hexagon-body .body-panel span {
+    margin: 16px 48px 16px 16px;
+    line-height: 1.65;
+  }
+  .hexagon-body .body-panel .skill-icons {
+    font-size: 2em;
+  }
+  .hexagon-body .body-panel .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: -3px;
+  }
+
+  .header-logo {
+    height: 300px;
+    position: absolute !important;
+  }
+  .header-logo > .header-logo-link a {
+    font: 300 48px/0.8 "Lemon/Milk";
+  }
+  .header-logo > .header-logo-link::before {
+    width: 338px;
+    height: 192px;
+  }
+
+  .hexagon-header {
+    top: 181px;
+    width: 100% !important;
+  }
+  .hexagon-header > .hexagon-header-description {
+    width: 100%;
+    height: 132px;
+    position: absolute;
+    top: 16px;
+    padding: 0 8%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  .hexagon-header > .hexagon-header-description .description-title {
+    display: block;
+  }
+  .hexagon-header > .hexagon-header-description #cut-to-shape {
+    display: none;
+  }
+  .hexagon-header > .hexagon-header-description > span {
+    font-size: 0.85em;
+  }
+  .hexagon-header > .hexagon-header-photo {
+    width: 128px;
+    height: 274px;
+    left: 32px;
+    position: absolute;
+  }
+  .hexagon-header > .hexagon-header-photo::before {
+    width: 8px;
+    height: 128px;
+    left: 60px;
+    top: -22.333px;
   }
 }
 
