@@ -132,6 +132,12 @@ header
     position: relative
     background-color: $color-main-light
 
+    *::selection
+        background: $color-addit-light
+
+    h4::selection
+        background: unquote('#00000022')
+
     &::before,
     &::after
         content: ""
@@ -245,8 +251,12 @@ header
                     color: $color-addit-dark
             
             .skill-icons
-                text-align: center
-                letter-spacing: .25em
+                width: 70%
+                margin: auto
+                display: flex
+                justify-content: space-evenly
+                align-items: center
+                flex-wrap: wrap
 
                 *
                     transition: $transition
@@ -353,7 +363,6 @@ header
 
             img.icon
                 @include size(64px, 64px)
-                margin-bottom: -7px
 
 
     // --------------------------------------------------------------
@@ -453,7 +462,6 @@ header
 
             .icon
                 @include size(48px,48px)
-                margin-bottom: -5px
 
     
 
@@ -540,7 +548,6 @@ header
 
             .icon
                 @include size(48px,48px)
-                margin-bottom: -5px
 
 
 
@@ -593,9 +600,9 @@ header
     // photo is now hidden
     .hexagon-header-photo
         visibility: hidden
-    // logo stops at 292px
+    // 
     .header-logo__absolute
-        top: 332px !important
+        top: 420px !important
 
 
     
@@ -644,12 +651,15 @@ header
         &::after
             border-top: $height-hexagon/2 solid $color-main-light
     
+    body,
+    html
+        height: 100%
+
     header
-        @include size(100vw, 100vh)
+        @include size(100vw, 100%)
 
         > nav
-            bottom: 70vw
-            z-index: 11 !important
+            bottom: 55vw
 
             > ul
                 width: $width-menu
@@ -661,6 +671,7 @@ header
 
                     > a
                         font-size: 1.4em
+                        z-index: 3 !important
                         
                         &:hover
                             text-shadow: 0 0 20px $color-main-accents
@@ -699,7 +710,7 @@ header
                                 border-right: $height-nav / 6 solid transparent
 
     .hexagon-body
-        padding: 384px 0
+        padding: 384px 0 128px
 
         .body-panel
             span
@@ -707,11 +718,15 @@ header
                 line-height: 1.65
             
             .skill-icons
-                font-size: 2em
+                width: 72%
+                margin: auto
+                font-size: 3em
+
+                *
+                    margin: 5px
 
             .icon
-                @include size(32px,32px)
-                margin-bottom: -3px
+                @include size(48px, 48px)
 
     .header-logo
         height: 300px
