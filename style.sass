@@ -190,7 +190,7 @@ header
     .hexagon-body
 
         .body-panel
-            padding-top: 64px
+            padding-top: 96px
 
             h4
                 @include size(fit-content, $height-bodypanel)
@@ -231,6 +231,19 @@ header
                 padding-left: 16px
                 border-left: 4px solid $color-main-accents
                 
+                > ul
+                    margin-left: 3em
+
+                    > li
+                        color: $color-main-accents
+
+                        > span
+                            font-weight: 400
+                            color: $color-main-dark
+                        
+                        > a
+                            color: $color-main-accents                    
+
                 > p
                     text-indent: 1em
 
@@ -298,6 +311,7 @@ header
                 display: grid
                 grid-template-columns: repeat(5, 1fr)
                 grid-template-rows: 140px
+                grid-gap: 8px
 
                 > div
                     @include flex-center
@@ -317,13 +331,7 @@ header
                     position: relative
                     background-size: cover
                     background-position: center center
-                    border-top: 4px solid #ccc
-                    border-bottom: 4px solid #ccc
-                    border-right: 4px solid #ccc
-                    
-
-                    &:first-child
-                        border-left: 4px solid #ccc
+                    border: 4px solid #ccc
 
                     &:hover
                         border: 4px solid $color-main-accents

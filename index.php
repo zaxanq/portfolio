@@ -78,6 +78,17 @@
                     </div>
                 </section>
             </section>
+            <section class="body-panel" id="contact-me">
+                <h4>Contact me</h4>
+                <span>
+                    <p>W kwestii pracy interesuje mnie tylko praca stacjonarna w Warszawie. Kontakt ze mną można nawiązać poprzez kilka kanałów komunikacji:</p>
+                    <ul>
+                        <li><span>E-mail</span>: <a href="mailto:krzysztof@kosmowski.ct8.pl">krzysztof@kosmowski.ct8.pl</a></li>
+                        <li><span>LinkedIn</span>: <a href="https://www.linkedin.com/in/krzysztof-kosmowski-81b9bb16a/">Krzysztof Kosmowski</a></li>
+                        <li><span>Telefon</span>: +48 733-686-692</li>
+                    </ul>
+                </span>
+            </section>
         </div>
     </div>
 <script type="text/javascript" src="js/logo.js"></script>
