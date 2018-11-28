@@ -45,19 +45,19 @@
             <section class="body-panel" id="about-me">
                 <h4>About me</h4>
                 <span>
-                    <p>Mam 24 lata, pochodzę z woj. Śląskiego jednak przeprowadziłem się do Warszawy w pogoni za ambicjami. Moim celem jest rozpocząć w stolicy życie, którego fundamentami będzie praca jako Front-end developer. Jest to dla mnie przepis na sukces, ponieważ nie wyobrażam sobie innej pracy, z której czerpałbym tyle radości i satysfakcji.</p>
-                    <p>Przygodę z Front-endem rozpocząłem już dawno temu, choć do niedawna zawsze nazywało się to „tworzeniem stron”. Dopiero jakiś czas temu pojawiło się pragnienie uporządkowania wiedzy związanej z semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z językiem CSS i jego preprocesorach, „przestawienie się” na JavaScript oraz jego biblioteki.</p>
-                    <p>Mam ambicje i chęci do zdobywania wiedzy i rozwijania się, do odkrywania nowych rozwiązań i utrwalania tych już poznanych, do poznawania frameworków, bibliotek, zrozumienia zasad ich działania. Jednak nawet największe chęci i starania nie równają się doświadczeniu komercyjnemu. Dlatego chcę zdobyć je jak najprędzej.</p>
+                    <p>Mam 24&#160;lata, pochodzę z&#160;woj. Śląskiego jednak obecnie mieszkam w&#160;Warszawie, gdzie przeprowadziłem się w&#160;pogoni za ambicjami. Moim celem jest rozpocząć życie, którego fundamentem będzie praca jako Front-end developer - jest&#160;to dla mnie przepis na sukces, bo nie wyobrażam sobie innej pracy, z&#160;której mógłbym czerpać tyle radości i&#160;satysfakcji.</p>
+                    <p>Przygodę z&#160;Front-endem rozpocząłem już dawno temu, jednak do niedawna określałem to po prostu "tworzeniem stron". Dopiero jakiś czas temu - rok? Półtorej roku? dwa lata? - pojawiło się pragnienie uporządkowania wiedzy związanej z&#160;semantyką najnowszej odsłony języka HTML, poszerzanie wiedzy związanej z&#160;językiem CSS i&#160;jego preprocesorach, nauka języka JavaScript oraz jego bibliotek.</p>
+                    <p>Mam ambicje i&#160;chęci do zdobywania wiedzy i&#160;rozwijania się, do&#160;odkrywania coraz to nowszych rozwiązań i&#160;utrwalania tych już poznanych. Do&#160;poznawania frameworków i&#160;bibliotek oraz zrozumienia zasad ich działania, do&#160;stosowania nowego oprogramowania oraz nowych języków programowania, a&#160;nawet technologii (backend). Jednak nawet największe chęci i&#160;starania nie równają&#160;się doświadczeniu komercyjnemu - dlatego chcę je zdobyć jak najprędzej.</p>
                 </span>
             </section>
 
             <section class="body-panel" id="my-skills">
                 <h4>My skills</h4>
                 <span>
-                    <p>Używam języka HTML 5, wraz z semantyką kodu, którą wnosi oraz unikając przestarzałych rozwiązań. Do stylizacji stosuję preprocesora Sass, ponieważ ułatwia on tworzenie przejrzystych deklaracji, znam również framework Boostrap jednak (póki co) nie uważam go za odpowiednie dla mnie rozwiązanie. Preferuję pisać własne deklaracje. Ćwicze na codziennej praktyce moje umiejętności języka Javascript (ECMAScript 6) i biblioteki jQuery. Znam podstawy języków PHP i Python, a także wielokrotnie stosowałem bazy danych MySQL.</p>
-                    <p>Poza technologiami webowymi i językami programowania posiadam także zaawansowaną wiedzę z zakresu używania narzędzi takich jak Adobe: Photoshop, Illustrator, Indesign, a dzięki wieloletniej pracy z tym pierwszym posiadam także wyczucie w doborze kolorów i estetyki. Wiele tworzonych projektów rozpoczynam właśnie w programie graficznym. Chciałbym sprawdzić w praktyce Adobe Experience Design.</p>
+                    <p>Do pracy stosuję HTML&#160;5, jednocześnie korzystając z&#160;jego semantyki kodu oraz unikając przestarzałych rozwiązań. Sporą część obecnej nauki poświęcam na RWD, w&#160;tym flexbox oraz grid. Do stylizacji stron używam CSS&#160;3 wraz z&#160;preprocesorem Sass, ponieważ ułatwia on tworzenie przejrzystych i&#160;czytelnych deklaracji. Staram&#160;się używać aktualnych rozwiązań i&#160;nie nadużywać tych nowopoznanych (choć bywa to trudne). Znam również framework Bootstrap, jednak preferuję pisać własne deklaracje, przynajmniej na&#160;razie. Ćwiczę na codziennej praktyce język JavaScript (ES6) oraz jQuery. Znam podstawy języka PHP i&#160;Python - obecnie używam tego pierwszego przy wszelkiej formy backendzie, jednak docelowo będę używał Django. Wielokrotnie stosowałem w&#160;moich stronach systemu zarządzania bazami danych MySQL.</p>
+                    <p>Poza technologiami webowymi i&#160;językami programowania posiadam także zaawansowaną wiedzę z&#160;zakresu używanai narzędzi takich jak Adobe Photoshop czy&#160;Adobe Illustrator, a&#160;dzięki wieloletniej pracy z&#160;tym pierwszym posiadam także wyczucie estetyki i&#160;w&#160;doborze kolorów. Wiele tworzonych projektów rozpocząłem własnie w&#160;programie graficznym. Chciałbym sprawdzić w&#160;praktyce Adobe Experience Design.</p>
                 </span>
-                <section class="skill-icons">
+                <section id="skill-icons">
                     <i class="fab fa-html5"></i>
                     <i class="fab fa-css3-alt"></i>
                     <i class="fab fa-js"></i>
@@ -67,9 +67,21 @@
                     <img src="img/illustrator_icon.svg" class="icon">
                 </section>
             </section>
+            <section class="body-panel" id="my-works">
+                <h4>My works</h4>
+                <span>
+                    <p>Obecnie moją największą pracą jest właśnie to portfolio. Z czasem jednak będę tutaj na bieżąco dodawał kolejne projekty.</p>
+                </span>
+                <section id="work-gallery">
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                </section>
+            </section>
         </div>
     </div>
 <script type="text/javascript" src="js/logo.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/body.js"></script>
 </body>
 </html>

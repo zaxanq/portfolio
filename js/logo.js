@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 setTimeout(function() {
   logo.removeAttr("style");
-  // $("header").removeAttr("style");
+  $("header").removeAttr("style");
   $(".hexagon").removeAttr("style");
 }, 2000);
 

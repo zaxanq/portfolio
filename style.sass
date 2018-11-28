@@ -47,6 +47,7 @@ $margin-bodypanel: 10px
 
 body
     background: $color-addit-light
+    color: $color-main-dark
     font-size: 16px
 
 header
@@ -225,7 +226,7 @@ header
                     top: 0
                 
 
-            span
+            > span
                 display: block
                 padding-left: 16px
                 border-left: 4px solid $color-main-accents
@@ -250,7 +251,7 @@ header
                 .text-dark
                     color: $color-addit-dark
             
-            .skill-icons
+            #skill-icons
                 width: 70%
                 margin: auto
                 display: flex
@@ -283,13 +284,62 @@ header
                 .fa-github:hover
                     color: #222222
 
-                img.icon
+                .icon
                     filter: grayscale(1) opacity(.22) contrast(2.4)
                     box-shadow: 4px 4px 0 #aaa
 
                     &:hover
                         filter: none
                         box-shadow: none
+                        
+            #work-gallery
+                width: 90%
+                margin: auto
+                display: grid
+                grid-template-columns: repeat(5, 1fr)
+                grid-template-rows: 140px
+
+                > div
+                    @include flex-center
+                    align-items: center
+
+                    > span
+                        position: relative
+                        color: $color-main-light
+                        text-align: center
+                        font-size: 1em
+
+                        > a
+                            color: $color-main-dark
+                            font-weight: 500
+
+                > *
+                    position: relative
+                    background-size: cover
+                    background-position: center center
+                    border-top: 4px solid #ccc
+                    border-bottom: 4px solid #ccc
+                    border-right: 4px solid #ccc
+                    
+
+                    &:first-child
+                        border-left: 4px solid #ccc
+
+                    &:hover
+                        border: 4px solid $color-main-accents
+
+                        &::before
+                            content: ''
+                            position: absolute
+                            background: unquote('#cb9753bb')
+                            width: 233.19px
+                            height: 132px
+                            @include flex-center
+                            align-items: center
+
+
+                #gallery-item-1
+                    background-image: url('img/gallery-item-1.gif')
 
 
     // --------------------------------------------------------------
@@ -358,11 +408,11 @@ header
             span
                 font-size: 1.1em
             
-            .skill-icons
+            #skill-icons
                 font-size: 4em
 
-            img.icon
-                @include size(64px, 64px)
+                .icon
+                    @include size(64px, 64px)
 
 
     // --------------------------------------------------------------
@@ -457,11 +507,11 @@ header
             span
                 font-size: 1em
             
-            .skill-icons
+            #skill-icons
                 font-size: 3em
 
-            .icon
-                @include size(48px,48px)
+                .icon
+                    @include size(48px,48px)
 
     
 
@@ -543,11 +593,11 @@ header
             span
                 font-size: 0.9em
             
-            .skill-icons
+            #skill-icons
                 font-size: 3em
 
-            .icon
-                @include size(48px,48px)
+                .icon
+                    @include size(48px,48px)
 
 
 
@@ -615,7 +665,7 @@ header
         padding: 64px 0
 
         .body-panel
-            span
+            > span
                 margin: 16px 128px 16px 76px
                 line-height: 1.8
 
@@ -713,11 +763,11 @@ header
         padding: 384px 0 128px
 
         .body-panel
-            span
+            > span
                 margin: 16px 48px 16px 16px
                 line-height: 1.65
             
-            .skill-icons
+            #skill-icons
                 width: 72%
                 margin: auto
                 font-size: 3em
@@ -725,8 +775,8 @@ header
                 *
                     margin: 5px
 
-            .icon
-                @include size(48px, 48px)
+                .icon
+                    @include size(48px, 48px)
 
     .header-logo
         height: 300px
