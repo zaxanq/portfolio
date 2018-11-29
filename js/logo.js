@@ -6,7 +6,7 @@ let scrollHeaderTo;
 let isLandscape = () => $(window).width() >= $(window).height();
 
 $(window).scroll(function() {
-  if (isLandscape()) {
+  if (isLandscape() && window.devicePixelRatio === 1) {
     // pc (logo is not scrolling on mobile)
     if ($(window).width() >= 1440) scrollLogoTo = 468;
     else if ($(window).width() >= 1360) scrollLogoTo = 448;
@@ -18,7 +18,7 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function() {
-  if (isLandscape()) {
+  if (isLandscape() && window.devicePixelRatio === 1) {
     if ($(window).width() >= 1280) scrollHeaderTo = 512;
     else scrollHeaderTo = 408;
     $(".hexagon")

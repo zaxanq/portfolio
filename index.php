@@ -74,29 +74,20 @@
                 </span>
                 <section id="work-gallery">
                     <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                        <span style="display: none;">
+                            My portfolio
+                            <br>Repo: <a href="#">click</a>
+                            <br>Live: <a href="#">click</a>
+                        </span>    
                     </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    <div id="gallery-item-2">
+                        <span style="display: none;">
+                            Website reconstruction<br>
+                            Live: <a href="../zadanie-wg/">click</a><br>
+                            Original: <a href="https://poland.wolvessummit.com/free-investors-book-for-startups">click</a> + <a href="http://wolvessummit.com">click</a>
+                        </span>    
                     </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
-                    <div id="gallery-item-1">
-                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
-                    </div>
+
                 </section>
             </section>
             <section class="body-panel" id="contact-me">

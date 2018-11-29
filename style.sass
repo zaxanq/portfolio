@@ -162,8 +162,6 @@ header
             
         .hexagon-header-description
             float: left
-            text-align: right
-            margin-right: 8px
 
             #cut-to-shape
                 @include size(100%, 132px)
@@ -190,7 +188,6 @@ header
     .hexagon-body
 
         .body-panel
-            padding-top: 96px
 
             h4
                 @include size(fit-content, $height-bodypanel)
@@ -342,13 +339,15 @@ header
 
                 #gallery-item-1
                     background-image: url('img/gallery-item-1.gif')
+                #gallery-item-2
+                    background-image: url('img/gallery-item-2.gif')
 
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR 1440p + HIGHER
 
-@media (min-width: 1430px) and (orientation: landscape)
+@media (min-width: 1430px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     // hexagon is now rigid with width of 1340px
     $width-hexagon: 1340px
     $height-hexagon: $width-hexagon * (1000/866) / 2
@@ -416,12 +415,17 @@ header
                 .icon
                     @include size(64px, 64px)
 
+            #work-gallery
+                > *:hover::before
+                    width: 226.8px
+                    height: 132px
+
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR 1366p + HIGHER
 
-@media (min-width: 1350px) and (orientation: landscape)
+@media (min-width: 1350px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
 
     // logo size is now 100%
     header
@@ -435,13 +439,20 @@ header
                 &::before
                     @include size(338px, 250px)
 
+    .hexagon-body
+        .body-panel
+            padding-top: 96px
+
+            #work-gallery
+                grid-template-columns: repeat(5, 1fr)
+
 
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR SMALLER + UP TO 1366px
 
-@media (max-width: 1429px) and (orientation: landscape)
+@media (max-width: 1429px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     // hexagon is responsive
     $width-hexagon: 90vw
     $height-hexagon: $width-hexagon * (1000/866) / 2
@@ -521,7 +532,7 @@ header
     // --------------------------------------------------------------
     // FOR 1280px AND OVER
 
-@media (min-width: 1270px) and (orientation: landscape)
+@media (min-width: 1270px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     header
         li
             height: inherit
@@ -531,16 +542,27 @@ header
                 text-shadow: 0 0 50px $color-main-accents
 
 
+    .hexagon-header-description
+        margin-right: 8px
+
     .hexagon-header-photo
         visibility: initial
 
+
+@media (min-width: 1350px) and (max-width: 1429px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
+    .hexagon-body
+        .body-panel
+            #work-gallery
+                > *:hover::before
+                    width: 15.6vw
+                    height: 132px
 
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR 1280px - 1440px
    
-@media (min-width: 1270px) and (max-width: 1479px) and (orientation: landscape)
+@media (min-width: 1270px) and (max-width: 1479px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     // menus are now responsive 
     $width-menu: 39vw
                  
@@ -563,7 +585,7 @@ header
     // --------------------------------------------------------------
     // FOR SMALLER AND UP TO 1280px
 
-@media (max-width: 1349px) and (orientation: landscape)
+@media (max-width: 1349px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     //header is now small (408px instead of 512)
     $height-header: 408px
 
@@ -592,6 +614,8 @@ header
     // smaller content font size and icon size
     .hexagon-body
         .body-panel
+            padding-top: 64px
+
             span
                 font-size: 0.9em
             
@@ -601,13 +625,20 @@ header
                 .icon
                     @include size(48px,48px)
 
+            #work-gallery
+                grid-template-columns: repeat(4, 1fr)
+
+                > *:hover::before
+                    width: 19.2vw
+                    height: 132px 
+
 
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
     // FOR SMALLER AND UP TO 1154px(?)
 
-@media (max-width: 1269px) and (orientation: landscape)
+@media (max-width: 1269px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
 
     // menus are now responsive AND stacked
     $width-menu: 19.5vw
@@ -647,7 +678,7 @@ header
                             background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255,255,255, 0) 100%)
 
                             &::before
-                                border-right: $height-nav / 6 solid transparent
+                                border-right: $height-nav / 6 solid transparent      
 
     // photo is now hidden
     .hexagon-header-photo
@@ -662,7 +693,7 @@ header
     // --------------------------------------------------------------
     // ANYTHING HORIZONTAL
 
-@media (orientation: landscape)
+@media (orientation: landscape) and (-webkit-device-pixel-ratio: 1)
     .hexagon-body
         padding: 64px 0
 
@@ -675,24 +706,65 @@ header
                     margin-left: 3em
             
             #work-gallery
-                grid-template-columns: repeat(5, 1fr)
-
                 > div
                     height: 140px
 
                     > span
                         font-size: 1em
 
+
+    .hexagon-header-description
+        text-align: right
+
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // HANDHELD PORTRAIT
+@media (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+    .hexagon
+        top: 480px
+
+    .hexagon-header
+        top: 181px
+
+        > .hexagon-header-description
+            @include size(100%, 132px)
+            position: absolute
+            top: 16px
+            padding: 0 8%
+            margin: 0 !important
+            text-align: center
+        
+        > .hexagon-header-photo
+            left: 32px
+            position: absolute
+
+    .hexagon-body
+        padding: 384px 0 128px
+
+        .body-panel
+            padding-top: 96px
+
+            #work-gallery
+                grid-template-columns: 1fr
+
                 > *:hover::before
-                    width: 226.8px
-                    height: 132px
+                    width: 340px
+                    height: 172px
 
+    header
+        > nav
+            bottom: 55vw
+
+            > ul
+                > li
+                    width: 36vw
 
     // --------------------------------------------------------------
     // --------------------------------------------------------------
-    // HANDHELD 
+    // HANDHELD BOTH PORTRAIT AND LANDSCAPE
 
-@media (orientation: portrait)
+@media (-webkit-min-device-pixel-ratio: 2)
     $hexagon-top-margin: 40vw
     $margin-menu: 5vw
     $width-menu: (100vw/2) - $margin-menu
@@ -705,7 +777,6 @@ header
         width: $width-hexagon
         margin: 0 5vw
         position: absolute !important
-        top: 480px
 
         &::before,
         &::after
@@ -726,7 +797,6 @@ header
         @include size(100vw, 100%)
 
         > nav
-            bottom: 55vw
 
             > ul
                 width: $width-menu
@@ -777,7 +847,6 @@ header
                                 border-right: $height-nav / 6 solid transparent
 
     .hexagon-body
-        padding: 384px 0 128px
 
         .body-panel
             > span
@@ -799,21 +868,16 @@ header
                     @include size(48px, 48px)
 
             #work-gallery
-                grid-template-columns: 1fr
 
                 > div
                     height: 180px
 
                     > span
                         font-size: 1.2em
-                    
-                > *:hover::before
-                    width: 340px
-                    height: 172px
 
     .header-logo
-        height: 300px
         position: absolute !important
+        height: 300px
 
         > .header-logo-link
             a
@@ -824,18 +888,11 @@ header
 
     //hexagon description and photo are small (not 100%)
     .hexagon-header
-        top: 181px
         width: 100% !important
             
         > .hexagon-header-description
-            @include size(100%, 132px)
-            position: absolute
-            top: 16px
-            padding: 0 8%
             font-size: 1.2em
             line-height: 1.5em
-            text-align: center !important
-            margin: 0 !important
 
             .description-title
                 display: block
@@ -849,10 +906,53 @@ header
 
         > .hexagon-header-photo
             @include size(128px, 274px)
-            left: 32px
-            position: absolute
 
             &::before
                 @include size(8px, 128px)
                 left: 60px
                 top: -22.333px
+
+
+    // --------------------------------------------------------------
+    // --------------------------------------------------------------
+    // HANDHELD LANDSCAPE
+@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+    .hexagon
+        top: 460px
+
+    .hexagon-header
+        height: 142px
+        top: 0
+        flex-direction: row-reverse
+        justify-content: center
+        align-items: flex-end
+
+        > .hexagon-header-description
+            @include size(328px, 136px)
+            position: initial
+            margin-left: 8px
+
+        > .hexagon-header-photo
+            position: initial
+            margin-left: 24px
+
+    .hexagon-body
+        padding: 168px 0 32px
+
+        .body-panel
+            padding-top: 64px
+
+            #work-gallery
+                grid-template-columns: 1fr 1fr
+
+                > *:hover::before
+                    width: 276px
+                    height: 172px
+
+    header
+        > nav
+            bottom: 2vw
+
+            > ul
+                > li
+                    width: 26vw
