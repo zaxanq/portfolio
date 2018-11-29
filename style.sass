@@ -232,8 +232,6 @@ header
                 border-left: 4px solid $color-main-accents
                 
                 > ul
-                    margin-left: 3em
-
                     > li
                         color: $color-main-accents
 
@@ -309,8 +307,7 @@ header
                 width: 90%
                 margin: auto
                 display: grid
-                grid-template-columns: repeat(5, 1fr)
-                grid-template-rows: 140px
+                grid-template-rows: auto
                 grid-gap: 8px
 
                 > div
@@ -321,7 +318,6 @@ header
                         position: relative
                         color: $color-main-light
                         text-align: center
-                        font-size: 1em
 
                         > a
                             color: $color-main-dark
@@ -340,8 +336,6 @@ header
                             content: ''
                             position: absolute
                             background: unquote('#cb9753bb')
-                            width: 233.19px
-                            height: 132px
                             @include flex-center
                             align-items: center
 
@@ -677,6 +671,21 @@ header
                 margin: 16px 128px 16px 76px
                 line-height: 1.8
 
+                > ul
+                    margin-left: 3em
+            
+            #work-gallery
+                grid-template-columns: repeat(5, 1fr)
+
+                > div
+                    height: 140px
+
+                    > span
+                        font-size: 1em
+
+                > *:hover::before
+                    width: 226.8px
+                    height: 132px
 
 
     // --------------------------------------------------------------
@@ -774,6 +783,9 @@ header
             > span
                 margin: 16px 48px 16px 16px
                 line-height: 1.65
+
+                > ul
+                    margin-left: 2em
             
             #skill-icons
                 width: 72%
@@ -785,6 +797,19 @@ header
 
                 .icon
                     @include size(48px, 48px)
+
+            #work-gallery
+                grid-template-columns: 1fr
+
+                > div
+                    height: 180px
+
+                    > span
+                        font-size: 1.2em
+                    
+                > *:hover::before
+                    width: 340px
+                    height: 172px
 
     .header-logo
         height: 300px

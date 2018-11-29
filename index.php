@@ -76,6 +76,27 @@
                     <div id="gallery-item-1">
                         <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
                     </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
+                    <div id="gallery-item-1">
+                        <span style="display: none;">My portfolio<br>Repo: <a href="#">click</a><br>Live: <a href="#">click</a></span>    
+                    </div>
                 </section>
             </section>
             <section class="body-panel" id="contact-me">

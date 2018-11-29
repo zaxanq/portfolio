@@ -272,9 +272,6 @@ header > nav > ul > li > a:hover::before {
   padding-left: 16px;
   border-left: 4px solid #cb9753;
 }
-.hexagon .hexagon-body .body-panel > span > ul {
-  margin-left: 3em;
-}
 .hexagon .hexagon-body .body-panel > span > ul > li {
   color: #cb9753;
 }
@@ -350,8 +347,7 @@ header > nav > ul > li > a:hover::before {
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 140px;
+  grid-template-rows: auto;
   grid-gap: 8px;
 }
 .hexagon .hexagon-body .body-panel #work-gallery > div {
@@ -363,7 +359,6 @@ header > nav > ul > li > a:hover::before {
   position: relative;
   color: #fff;
   text-align: center;
-  font-size: 1em;
 }
 .hexagon .hexagon-body .body-panel #work-gallery > div > span > a {
   color: #222;
@@ -382,8 +377,6 @@ header > nav > ul > li > a:hover::before {
   content: "";
   position: absolute;
   background: #cb9753bb;
-  width: 233.19px;
-  height: 132px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -636,6 +629,22 @@ header > nav > ul > li > a:hover::before {
     margin: 16px 128px 16px 76px;
     line-height: 1.8;
   }
+  .hexagon-body .body-panel > span > ul {
+    margin-left: 3em;
+  }
+  .hexagon-body .body-panel #work-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .hexagon-body .body-panel #work-gallery > div {
+    height: 140px;
+  }
+  .hexagon-body .body-panel #work-gallery > div > span {
+    font-size: 1em;
+  }
+  .hexagon-body .body-panel #work-gallery > *:hover::before {
+    width: 226.8px;
+    height: 132px;
+  }
 }
 @media (orientation: portrait) {
   .hexagon {
@@ -721,6 +730,9 @@ html {
     margin: 16px 48px 16px 16px;
     line-height: 1.65;
   }
+  .hexagon-body .body-panel > span > ul {
+    margin-left: 2em;
+  }
   .hexagon-body .body-panel #skill-icons {
     width: 72%;
     margin: auto;
@@ -732,6 +744,19 @@ html {
   .hexagon-body .body-panel #skill-icons .icon {
     width: 48px;
     height: 48px;
+  }
+  .hexagon-body .body-panel #work-gallery {
+    grid-template-columns: 1fr;
+  }
+  .hexagon-body .body-panel #work-gallery > div {
+    height: 180px;
+  }
+  .hexagon-body .body-panel #work-gallery > div > span {
+    font-size: 1.2em;
+  }
+  .hexagon-body .body-panel #work-gallery > *:hover::before {
+    width: 340px;
+    height: 172px;
   }
 
   .header-logo {
