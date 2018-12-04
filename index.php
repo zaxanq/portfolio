@@ -76,7 +76,7 @@
                     <div id="gallery-item-1">
                         <span style="display: none;">
                             My portfolio
-                            <br>Repo: <a href="#">click</a>
+                            <br>Repo: <a href="https://github.com/zaxanq/portfolio">click</a>
                             <br>Live: <a href="#">click</a>
                         </span>    
                     </div>
